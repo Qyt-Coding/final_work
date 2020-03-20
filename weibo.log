@@ -1,0 +1,104 @@
+9050 INFO  [2020-03-21 01:15:34]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+9423 INFO  [2020-03-21 01:15:35]  done: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_followers_-_2718604160
+10051 INFO  [2020-03-21 01:15:35]  -activeThreads=0, spinWaiting=0, fetchQueue.size=0
+10051 INFO  [2020-03-21 01:15:35]  clear all activeThread
+10051 INFO  [2020-03-21 01:15:35]  close generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
+10051 INFO  [2020-03-21 01:15:35]  close segmentwriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
+10051 INFO  [2020-03-21 01:15:35]  depth 1 finish: 
+	total urls:	1
+	total time:	10 seconds
+10051 INFO  [2020-03-21 01:15:35]  start depth 2
+10053 INFO  [2020-03-21 01:15:35]  start merge
+10053 INFO  [2020-03-21 01:15:35]  merge fetch database
+10053 INFO  [2020-03-21 01:15:35]  merge link database
+10053 INFO  [2020-03-21 01:15:35]  end merge
+10073 DEBUG [2020-03-21 01:15:35]  remove fetch database
+10090 DEBUG [2020-03-21 01:15:35]  remove link database
+10090 INFO  [2020-03-21 01:15:35]  open generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
+10091 INFO  [2020-03-21 01:15:35]  init segmentWriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
+11092 INFO  [2020-03-21 01:15:36]  -activeThreads=0, spinWaiting=0, fetchQueue.size=0
+11093 INFO  [2020-03-21 01:15:36]  clear all activeThread
+11094 INFO  [2020-03-21 01:15:36]  close generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
+11095 INFO  [2020-03-21 01:15:36]  close segmentwriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
+11095 INFO  [2020-03-21 01:15:36]  depth 2 finish: 
+	total urls:	0
+	total time:	1 seconds
+15331 INFO  [2020-03-21 01:15:41]  start depth 1
+15331 INFO  [2020-03-21 01:15:41]  start merge
+15332 INFO  [2020-03-21 01:15:41]  merge fetch database
+15333 INFO  [2020-03-21 01:15:41]  merge link database
+15333 INFO  [2020-03-21 01:15:41]  end merge
+15354 DEBUG [2020-03-21 01:15:41]  remove fetch database
+15371 DEBUG [2020-03-21 01:15:41]  remove link database
+15371 INFO  [2020-03-21 01:15:41]  open generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
+15372 INFO  [2020-03-21 01:15:41]  init segmentWriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
+16373 INFO  [2020-03-21 01:15:42]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+16373 INFO  [2020-03-21 01:15:42]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
+17373 INFO  [2020-03-21 01:15:43]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+17373 INFO  [2020-03-21 01:15:43]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
+18373 INFO  [2020-03-21 01:15:44]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+18373 INFO  [2020-03-21 01:15:44]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
+19374 INFO  [2020-03-21 01:15:45]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+19374 INFO  [2020-03-21 01:15:45]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
+20374 INFO  [2020-03-21 01:15:46]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+20374 INFO  [2020-03-21 01:15:46]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
+21374 INFO  [2020-03-21 01:15:47]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+21374 INFO  [2020-03-21 01:15:47]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
+22375 INFO  [2020-03-21 01:15:48]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+22375 INFO  [2020-03-21 01:15:48]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
+23375 INFO  [2020-03-21 01:15:49]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+23375 INFO  [2020-03-21 01:15:49]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
+24376 INFO  [2020-03-21 01:15:50]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+24376 INFO  [2020-03-21 01:15:50]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
+25377 INFO  [2020-03-21 01:15:51]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+25377 INFO  [2020-03-21 01:15:51]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
+26377 INFO  [2020-03-21 01:15:52]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+26377 INFO  [2020-03-21 01:15:52]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
+27377 INFO  [2020-03-21 01:15:53]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+27377 INFO  [2020-03-21 01:15:53]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
+28378 INFO  [2020-03-21 01:15:54]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+28378 INFO  [2020-03-21 01:15:54]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
+29378 INFO  [2020-03-21 01:15:55]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+29378 INFO  [2020-03-21 01:15:55]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
+30379 INFO  [2020-03-21 01:15:56]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+30379 INFO  [2020-03-21 01:15:56]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
+31380 INFO  [2020-03-21 01:15:57]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+31380 INFO  [2020-03-21 01:15:57]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
+32381 INFO  [2020-03-21 01:15:58]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+32381 INFO  [2020-03-21 01:15:58]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
+33382 INFO  [2020-03-21 01:15:59]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+33382 INFO  [2020-03-21 01:15:59]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
+34383 INFO  [2020-03-21 01:16:00]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+34383 INFO  [2020-03-21 01:16:00]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
+35383 INFO  [2020-03-21 01:16:01]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+35383 INFO  [2020-03-21 01:16:01]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
+36384 INFO  [2020-03-21 01:16:02]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+36384 INFO  [2020-03-21 01:16:02]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
+37385 INFO  [2020-03-21 01:16:03]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+37385 INFO  [2020-03-21 01:16:03]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
+38385 INFO  [2020-03-21 01:16:04]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+38385 INFO  [2020-03-21 01:16:04]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
+39385 INFO  [2020-03-21 01:16:05]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+39385 INFO  [2020-03-21 01:16:05]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
+40385 INFO  [2020-03-21 01:16:06]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+40385 INFO  [2020-03-21 01:16:06]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
+41170 INFO  [2020-03-21 01:16:06]  failed: https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=1
+com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 12 path $
+	at com.google.gson.JsonParser.parse(JsonParser.java:65)
+	at com.google.gson.JsonParser.parse(JsonParser.java:45)
+	at com.qyt.CollectorWeiBo.getFullTextById(CollectorWeiBo.java:426)
+	at com.qyt.CollectorWeiBo.replaceFullContrnt(CollectorWeiBo.java:392)
+	at com.qyt.CollectorWeiBo.paeseByJson(CollectorWeiBo.java:345)
+	at com.qyt.CollectorWeiBo.visit(CollectorWeiBo.java:175)
+	at cn.edu.hfut.dmic.webcollector.crawler.AutoParseCrawler.execute(AutoParseCrawler.java:73)
+	at cn.edu.hfut.dmic.webcollector.fetcher.Fetcher$FetcherThread.run(Fetcher.java:228)
+Caused by: com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 12 path $
+	at com.google.gson.stream.JsonReader.syntaxError(JsonReader.java:1568)
+	at com.google.gson.stream.JsonReader.checkLenient(JsonReader.java:1409)
+	at com.google.gson.stream.JsonReader.doPeek(JsonReader.java:542)
+	at com.google.gson.stream.JsonReader.peek(JsonReader.java:425)
+	at com.google.gson.JsonParser.parse(JsonParser.java:60)
+	... 7 more
+41386 INFO  [2020-03-21 01:16:07]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+42386 INFO  [2020-03-21 01:16:08]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+43386 INFO  [2020-03-21 01:16:09]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
