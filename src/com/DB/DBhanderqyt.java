@@ -148,8 +148,29 @@ public class DBhanderqyt {
 		return IDF;
 	}
 
-	/**
-	 * 
+	/*
+	 * 根据lexiconId获得IDF的值
 	 */
-
+	public Doc getDocById(int docId) {
+		
+		Doc doc=new Doc();
+		String cmdString = "select * from doc where doc.DocID='"+docId+"'";
+		Statement ste;
+	   
+		try {
+			ste = conn.createStatement();
+			ResultSet resultSet = ste.executeQuery(cmdString);
+			while (resultSet.next()) {
+				String docText=resultSet.getString("DocText");
+				int docID=resultSet.getInt("DocID");
+				String authorName=resultSet.getString("authorName");
+				doc.setDocCon(docText);
+				doc.setAuthorName(authorName);
+				doc.setDocID(docID);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return doc;
+	}
 }

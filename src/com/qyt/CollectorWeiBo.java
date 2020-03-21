@@ -242,19 +242,23 @@ public class CollectorWeiBo extends BreadthCrawler {
 	 * show 获取第一页中微博的总页数
 	 */
 	int getMaxPage(String rooturl) {
-		System.out.println(rooturl);//
-		int code = 0;
-		int maxPage = 0;
-		String jsonStr = getHtmlByUrl(rooturl);
-		// System.out.println(jsonStr);
-		JsonParser parse = new JsonParser(); // 创建json解析器
-		JsonObject jsonObject = (JsonObject) parse.parse(jsonStr);
-		JsonObject datajsonObject = jsonObject.get("data").getAsJsonObject();
-		if (datajsonObject != null) {
-			String index = datajsonObject.get("cardlistInfo").getAsJsonObject().get("total").getAsString();
-			System.out.println(index);
-			maxPage = (Integer.parseInt(index) - 1) / 10 + 1;
-			System.out.println("最大的页面数：    " + maxPage);
+		try {
+			System.out.println(rooturl);//
+			int code = 0;
+			int maxPage = 0;
+			String jsonStr = getHtmlByUrl(rooturl);
+			// System.out.println(jsonStr);
+			JsonParser parse = new JsonParser(); // 创建json解析器
+			JsonObject jsonObject = (JsonObject) parse.parse(jsonStr);
+			JsonObject datajsonObject = jsonObject.get("data").getAsJsonObject();
+			if (datajsonObject != null) {
+				String index = datajsonObject.get("cardlistInfo").getAsJsonObject().get("total").getAsString();
+				System.out.println(index);
+				maxPage = (Integer.parseInt(index) - 1) / 10 + 1;
+				System.out.println("最大的页面数：    " + maxPage);
+			}
+		}catch(Exception e) {
+			maxPage=0;
 		}
 		return maxPage;
 	}
@@ -420,11 +424,11 @@ public class CollectorWeiBo extends BreadthCrawler {
 		// url：http://m.weibo.cn/statuses/extend?id=4080915241593181&retcode=6102
 		//String url = "http://m.weibo.cn/statuses/extend?id=" + id;// String url =
 		StringBuilder str=new StringBuilder("http://m.weibo.cn/statuses/extend?id=");// "http://m.weibo.cn/statuses/extend?id=" + id +// "&retcode=6102";
-		String url=str.append(id.replaceAll("\"", "")).append("&").append(new Date()).toString();
-		String html = getHtmlByUrl(url);
+		String url=str.append(id.replaceAll("\"", "")).toString();
+		String html = Utilqyt1.getInstance().resolveRedir1(url);
 		JsonParser parse = new JsonParser(); // 创建json解析器
 		JsonObject jsonObject = (JsonObject) parse.parse(html); // 创建jsonObject对象
-		String text = jsonObject.get("longTextContent").toString(); // 得到为json的数组
+		String text = jsonObject.getAsJsonObject("data").get("longTextContent").toString(); // 得到为json的数组
 		return text;
 	}
 
@@ -441,6 +445,10 @@ public class CollectorWeiBo extends BreadthCrawler {
 				HttpURLConnection conn = (HttpURLConnection) Url.openConnection();
 				// 这个很必要，否则就是403
 				conn.setRequestProperty("User-Agent", "Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)");
+//				conn.setRequestProperty("Accept", "*/*");
+//				conn.setRequestProperty("Cache-Control", "no-cache");
+//				conn.setRequestProperty("Accept-Encoding", "gzip, deflate, br");
+//				conn.setRequestProperty("Connection", "keep-alive");
 				code = conn.getResponseCode();
 				InputStreamReader isr = new InputStreamReader(conn.getInputStream());
 				BufferedReader br = new BufferedReader(isr);

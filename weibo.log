@@ -1,104 +1,833 @@
-9050 INFO  [2020-03-21 01:15:34]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
-9423 INFO  [2020-03-21 01:15:35]  done: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_followers_-_2718604160
-10051 INFO  [2020-03-21 01:15:35]  -activeThreads=0, spinWaiting=0, fetchQueue.size=0
-10051 INFO  [2020-03-21 01:15:35]  clear all activeThread
-10051 INFO  [2020-03-21 01:15:35]  close generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
-10051 INFO  [2020-03-21 01:15:35]  close segmentwriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
-10051 INFO  [2020-03-21 01:15:35]  depth 1 finish: 
-	total urls:	1
-	total time:	10 seconds
-10051 INFO  [2020-03-21 01:15:35]  start depth 2
-10053 INFO  [2020-03-21 01:15:35]  start merge
-10053 INFO  [2020-03-21 01:15:35]  merge fetch database
-10053 INFO  [2020-03-21 01:15:35]  merge link database
-10053 INFO  [2020-03-21 01:15:35]  end merge
-10073 DEBUG [2020-03-21 01:15:35]  remove fetch database
-10090 DEBUG [2020-03-21 01:15:35]  remove link database
-10090 INFO  [2020-03-21 01:15:35]  open generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
-10091 INFO  [2020-03-21 01:15:35]  init segmentWriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
-11092 INFO  [2020-03-21 01:15:36]  -activeThreads=0, spinWaiting=0, fetchQueue.size=0
-11093 INFO  [2020-03-21 01:15:36]  clear all activeThread
-11094 INFO  [2020-03-21 01:15:36]  close generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
-11095 INFO  [2020-03-21 01:15:36]  close segmentwriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
-11095 INFO  [2020-03-21 01:15:36]  depth 2 finish: 
+730105 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 >> User-Agent: Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)
+730105 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 >> Host: m.weibo.cn
+730105 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 >> Connection: Keep-Alive
+730105 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 >> Accept-Encoding: gzip,deflate
+730105 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 >> "GET /statuses/extend?id=4483187302699023 HTTP/1.1[\r][\n]"
+730105 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 >> "User-Agent: Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)[\r][\n]"
+730105 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 >> "Host: m.weibo.cn[\r][\n]"
+730105 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 >> "Connection: Keep-Alive[\r][\n]"
+730105 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+730105 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 >> "[\r][\n]"
+730179 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 << "HTTP/1.1 302 Moved Temporarily[\r][\n]"
+730179 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 << "Server: Tengine/2.3.0[\r][\n]"
+730179 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 << "Date: Sat, 21 Mar 2020 14:21:59 GMT[\r][\n]"
+730179 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 << "Content-Type: text/html[\r][\n]"
+730179 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 << "Content-Length: 221[\r][\n]"
+730179 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 << "Connection: keep-alive[\r][\n]"
+730179 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 << "Location: https://m.weibo.cn/statuses/extend?id=4483187302699023[\r][\n]"
+730179 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 << "SSL_NODE: ssl-013.mweibo.dbl.intra.weibo.cn[\r][\n]"
+730179 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 << "LB: 39.156.6.59[\r][\n]"
+730179 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 << "Cache-Control: no-cache[\r][\n]"
+730179 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 << "[\r][\n]"
+730179 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 << "<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">[\r][\n]"
+730179 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 << "<html>[\r][\n]"
+730179 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 << "<head><title>302 Found</title></head>[\r][\n]"
+730179 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 << "<body>[\r][\n]"
+730179 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 << "<center><h1>302 Found</h1></center>[\r][\n]"
+730179 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 << "<hr/>Powered by Tengine/2.3.0<hr><center>tengine</center>[\r][\n]"
+730179 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 << "</body>[\r][\n]"
+730179 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 << "</html>[\r][\n]"
+730179 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 << HTTP/1.1 302 Moved Temporarily
+730179 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 << Server: Tengine/2.3.0
+730179 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 << Date: Sat, 21 Mar 2020 14:21:59 GMT
+730179 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 << Content-Type: text/html
+730179 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 << Content-Length: 221
+730179 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 << Connection: keep-alive
+730179 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 << Location: https://m.weibo.cn/statuses/extend?id=4483187302699023
+730179 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 << SSL_NODE: ssl-013.mweibo.dbl.intra.weibo.cn
+730179 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 << LB: 39.156.6.59
+730179 DEBUG [2020-03-21 22:21:57]  http-outgoing-59 << Cache-Control: no-cache
+730179 DEBUG [2020-03-21 22:21:57]  Connection can be kept alive indefinitely
+730180 DEBUG [2020-03-21 22:21:57]  Redirect requested to location 'https://m.weibo.cn/statuses/extend?id=4483187302699023'
+730180 DEBUG [2020-03-21 22:21:57]  Resetting target auth state
+730180 DEBUG [2020-03-21 22:21:57]  Redirecting to 'https://m.weibo.cn/statuses/extend?id=4483187302699023' via {s}->https://m.weibo.cn:443
+730181 DEBUG [2020-03-21 22:21:57]  Connection [id: 59][route: {}->http://m.weibo.cn:80] can be kept alive indefinitely
+730181 DEBUG [2020-03-21 22:21:57]  Connection released: [id: 59][route: {}->http://m.weibo.cn:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+730181 DEBUG [2020-03-21 22:21:57]  CookieSpec selected: default
+730182 DEBUG [2020-03-21 22:21:57]  Auth cache not set in the context
+730182 DEBUG [2020-03-21 22:21:57]  Connection request: [route: {s}->https://m.weibo.cn:443][total kept alive: 1; route allocated: 0 of 2; total allocated: 1 of 20]
+730182 DEBUG [2020-03-21 22:21:57]  Connection leased: [id: 60][route: {s}->https://m.weibo.cn:443][total kept alive: 1; route allocated: 1 of 2; total allocated: 2 of 20]
+730182 DEBUG [2020-03-21 22:21:57]  Opening connection {s}->https://m.weibo.cn:443
+730183 DEBUG [2020-03-21 22:21:57]  Connecting to m.weibo.cn/39.156.6.59:443
+730183 DEBUG [2020-03-21 22:21:57]  Connecting socket to m.weibo.cn/39.156.6.59:443 with timeout 0
+730237 DEBUG [2020-03-21 22:21:58]  Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]
+730237 DEBUG [2020-03-21 22:21:58]  Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+730237 DEBUG [2020-03-21 22:21:58]  Starting handshake
+730848 DEBUG [2020-03-21 22:21:58]  Secure session established
+730848 DEBUG [2020-03-21 22:21:58]   negotiated protocol: TLSv1.2
+730848 DEBUG [2020-03-21 22:21:58]   negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+730848 DEBUG [2020-03-21 22:21:58]   peer principal: CN=weibo.cn, OU="Sina.com Technology(China)Co.,ltd", O="Sina.com Technology(China)Co.,ltd", ST=Beijing, C=CN
+730848 DEBUG [2020-03-21 22:21:58]   peer alternative names: [weibo.cn, www.weibo.cn, company.admin.weibo.com, *.movie.weibo.com, *.edm.weibo.cn, *.qr.weibo.cn, *.music.weibo.com, *.krcom.cn, krcom.cn, *.weibo.cn, admin.event.weibo.com, *.music.sina.com.cn, *.sina.cn, *.sinaimg.cn, *.oasis.weibo.cn, *.api.weibo.cn, *.chengdu.weibo.cn, *.ting.weibo.com, *.weibo.com, *.forecast.sina.cn, *.photo.weibo.com, *.h5.weibo.cn, *.sina.com.cn, *.media.weibo.com, agent.star.weibo.com, *.sinajs.cn, *.star.weibo.com, company.verified.weibo.com]
+730848 DEBUG [2020-03-21 22:21:58]   issuer principal: CN=GeoTrust CN RSA CA G1, OU=www.digicert.com, O=DigiCert Inc, C=US
+730848 DEBUG [2020-03-21 22:21:58]  Connection established 192.168.0.100:38057<->39.156.6.59:443
+730848 DEBUG [2020-03-21 22:21:58]  Executing request GET /statuses/extend?id=4483187302699023 HTTP/1.1
+730849 DEBUG [2020-03-21 22:21:58]  Target auth state: UNCHALLENGED
+730849 DEBUG [2020-03-21 22:21:58]  Proxy auth state: UNCHALLENGED
+730849 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 >> GET /statuses/extend?id=4483187302699023 HTTP/1.1
+730849 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 >> User-Agent: Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)
+730849 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 >> Host: m.weibo.cn
+730849 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 >> Connection: Keep-Alive
+730849 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 >> Accept-Encoding: gzip,deflate
+730849 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 >> "GET /statuses/extend?id=4483187302699023 HTTP/1.1[\r][\n]"
+730849 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 >> "User-Agent: Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)[\r][\n]"
+730849 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 >> "Host: m.weibo.cn[\r][\n]"
+730849 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 >> "Connection: Keep-Alive[\r][\n]"
+730849 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+730849 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 >> "[\r][\n]"
+731040 INFO  [2020-03-21 22:21:58]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << "HTTP/1.1 200 OK[\r][\n]"
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << "Server: Tengine/2.3.0[\r][\n]"
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << "Date: Sat, 21 Mar 2020 14:22:00 GMT[\r][\n]"
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << "Content-Type: application/json; charset=utf-8[\r][\n]"
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << "Transfer-Encoding: chunked[\r][\n]"
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << "Connection: keep-alive[\r][\n]"
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << "Vary: Accept-Encoding[\r][\n]"
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << "X-Powered-By: PHP/7.2.1[\r][\n]"
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << "Set-Cookie: _T_WM=65409199027; expires=Tue, 31-Mar-2020 14:22:00 GMT; Max-Age=864000; path=/; domain=.weibo.cn[\r][\n]"
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << "Set-Cookie: XSRF-TOKEN=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/; domain=.weibo.cn[\r][\n]"
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << "Set-Cookie: XSRF-TOKEN=fb0fd1; expires=Sat, 21-Mar-2020 14:42:00 GMT; Max-Age=1200; path=/; domain=m.weibo.cn[\r][\n]"
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << "Set-Cookie: WEIBOCN_FROM=1110006030; path=/; domain=.weibo.cn; HttpOnly[\r][\n]"
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << "Set-Cookie: MLOGIN=0; expires=Sat, 21-Mar-2020 15:22:00 GMT; Max-Age=3600; path=/; domain=.weibo.cn[\r][\n]"
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << "X-Log-Uid: [\r][\n]"
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << "Content-Security-Policy: upgrade-insecure-requests[\r][\n]"
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << "PROC_NODE: mweibo-10-22-3-30.xxg.intra.weibo.cn[\r][\n]"
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << "Content-Encoding: gzip[\r][\n]"
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << "SSL_NODE: ssl-002.mweibo.dbl.intra.weibo.cn[\r][\n]"
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << "LB: 39.156.6.59[\r][\n]"
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << "Cache-Control: no-cache[\r][\n]"
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << "[\r][\n]"
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << "334[\r][\n]"
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << "[0x1f][0x8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x3][0xa5]TM[0x8f][0xdb]6[0x10][0xfd]+[0x82][0x2][0xd5][0x97][0x8d]MR"E[0xba][0xb6][0xb][0xef][0xc6]9[0x14]EZ[0xa0]i[0xd1][0x0][0x2][0xc][0x8a]"-%[0x92][0xe5]JT7[0xdb] [0xff][0xbd]3[0xf2][0xca][0xeb][0x0][0xdd][0xe4][0x90][0xcb]h4$g[0xe6][0xcd][0xc7][0xfb][0x14][0xb6][0x1f][0xc2]%[0xbd][0x9][0xb][0xed]u[0xb8][0xfc]4[0xfd][0xd6][0xed][0xf1][0xf0][0xd6]~[0xf4]w[0xed][0xd1][0xdb][0xa3][0xf][0x97]a6[0xc4][0x84][0x92][0x95][0xe][0x82][0xb2][0xb3]n[0x9d][0x85][0xa5][0xf7][0xa7]~[0x99]-[0xb2]E3[0xbf][0xb7]U[0xde][0xce][0xcd]1[[0xf4]Vw[0xa6][0xfc][0xc9][0xc0];][0x1d]mW[0x15]k[0x16]S[0xce][0x98]8[0xd9](~E#&<~[0x9]([0x83][0x12][0xb1]8[0xda][0xf1]H[0xdd]E[[0x89][0xca]v[0x17][0xdd][\n]"
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << "T[0xe4]6R[0xbb]Q[0x1][0xe3]][0xb4]K#[0xb5][0x8d]d[0x12][0xed][0x92][0xe8][0xf6]U[0xb4][0x85][0xf7][0xf1][0xf][0x90][0xe1]Iw[0xba]Y[0x8f][0x97],[0xc][0x10][0xfd][0xcb][0xb2]*,[0xe0][0xca][0xc2][0xcd][0xaa]?[0xe9]c`j[0xdd][0xf7]`[0xe8][0x87][0xae]~[0xe9]![0x14][0x9c][0xbc][0xc8][0x6][0x9e]2[0x9]2[0xcf][0x5]H[0xa6],H*L6[0xa4]B&[0xd9][0x90]8A^[0xac][0xa0][0xe][0xe0]a[0x3]_[0xbd][0x9][0xb2][0xc1]9[0x2][0x17][0x12]K[0xe3][0xe9][0xa1][0xe0]\[0x9d]/g[0x83]t[0x5][0xe8]B[0xc6][0xe9][0xe4][0x84][0xa7][0x1c][0xec]\9[0x7]v[0x96][0x14] [0x85][0x3][0xbb]d[0x94][0x81][0x9e][0x92]b[0xec][0x6][0x1d][0xf5][0xb3][0x7][0x8a][0xfe][0xd1][0xce][\r][0x1d][0xf5]\[0x83][0xee][0xf0][0x94]'[0xcc][0xa1]EB\F[0xa8]y[0x1e][0x2][0x9c]b,[0xcd][0xe8][0xf8][0xd6]M[0x99][0xf3]X[0x8d][0x1e],G[0x19][0xeb][0xe7]=$[0x8e][0xea][0xff][0xcb]v[0xf2]c[0x11][0x91][0xc0]|[0x84][0xd1][0x18][0x85][0xda][0x11])S[0x97];N[0xa2]g[0x85]~[0x1e]Q[0x98][0x18]or[0x9]z[0x9a]&[0x88][0x97][0xa6] [0x15]M[0xe1][0xa6]$[0x6][0x8b][0xcf][0x8b][0x1c]kB[0xd8][0x94][0xad]H[0x5][0xff]V[0xb3][0x4]wh'[0x14][0xeb][0x9f][0x17][0x98][0xb3][0x93][0xd0]#%$z[0xa0]W[0x15]H[0x8][0x9c][0xa6][0xca][0x0][0x16][0xc5][0xf1][0xbe][0xcc][0x11][0xcb]c[0xbf][0xc6]Nq[0x96][0xbb]1[0x16]z[0x13][0xd8]kE[0x18][0xc1][0xe]R[0xcc]V".E,[0xe6][0x93]HsA1Z[0xce][0xbd]Sc[0xfe]g[0x14][0x8a][0xe8][0x18][0xed][0x89]|[0x9a][0x1f]C&[0xcb][0xf5][0xb4][0x80][0x80]S[0xa1][0x8][0x9f]<1?[0xd7][0xb8][0xce][0xf5]I[0x8]F[0x1c][0xfb][0xb]o1[0x9f]b[0xec][0xac][0xe3]#R[0xc1]0"}[0xaa]a[0xc2][0xcc]$[0xaf]g[0xf8][0x11][0xbb]u[0x1a][0xab][0xa1][0xed]9[0xf3]U[0xde][0x5][0xd9]b[0x3]D1.[0x15][0xec][0xce]#W[0x8c]T[0xe1]G[0x92][0xd8][0x8a][0xdb]\=[0xa4][0xb0]yWdr[0xe6][0x92]J[0xb7]'][0xcd]M[0xdb][0xc0][0x12][0x95][0xed]}[0xb6][0xa8][0x8a][0xdb][0xbf][0xe2][0xf2][0xde][0xbc])v[0xa9]{x[0xfb][0xe7]k[0xfd][0xae]|[0xff][0xe6][0x8f][0xdf][0xde][0xb8][0xfd][0xe5][0xf4][0xab][0xff][0xd9][0xd6][0xe6][0xf7][0x8f][0x87][0xfd]~^[0xfa][0xe6][0xeb][0xbb]<[0xc3]M[0xae][0x80][0x9b]f[0x9b]U[0xd5][0x1c][0x82][0xde]?[0xd4]v=[0xbb][0xaf][\n]"
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << "_.[0x3][0xda][0xd9][0xe6][0xc7][0xd2]V[0x87][0xd2][0x9f]fA[0xdf][0x99][0xf5][0xec][0x89][0xe8]J>[0xef][0xab][0xa3][0x86][0xa7]#[0x8c][0xe1]T[0xb7][0xba][0xc8][0x16][0xb0]6<[[0x10][0x5][0x1a]|c@Y5[0xb6][0x6][0xf6][0xdb][0x1b][0xdd][0x15][0xfb][0xbe][0xd1]u[0xbd][0xff][0x7]2j[0xf7][0x5]Tk[0xa8][0xfd][0xfc]t<[0xcc]6[0x17][0x9a]x[0x96]np[0xf8][0xb1]M[0xb0] P^[0xa9][0x8c][0xc0]ARt*~[0xaa][\n]"
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << "\1[0x86]c[0xf9]t[0xfa][0x5][0xfd][0x84]7agOm[0xef][0xfb][0xbd]i[0x7][0xa4]rr[0x13]Bu[0x1b][0xa0][0xf5][0x8b][0x9][0x18]_{_[0xf9][0xa1][0xb0][0x17][0x9b][0xfa][0xfc][0xf9]?y^[0xf3][0x92][0x1e][0x6][0x0][0x0][\r][\n]"
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << "0[\r][\n]"
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << "[\r][\n]"
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << HTTP/1.1 200 OK
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << Server: Tengine/2.3.0
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << Date: Sat, 21 Mar 2020 14:22:00 GMT
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << Content-Type: application/json; charset=utf-8
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << Transfer-Encoding: chunked
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << Connection: keep-alive
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << Vary: Accept-Encoding
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << X-Powered-By: PHP/7.2.1
+731080 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << Set-Cookie: _T_WM=65409199027; expires=Tue, 31-Mar-2020 14:22:00 GMT; Max-Age=864000; path=/; domain=.weibo.cn
+731081 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << Set-Cookie: XSRF-TOKEN=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/; domain=.weibo.cn
+731081 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << Set-Cookie: XSRF-TOKEN=fb0fd1; expires=Sat, 21-Mar-2020 14:42:00 GMT; Max-Age=1200; path=/; domain=m.weibo.cn
+731081 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << Set-Cookie: WEIBOCN_FROM=1110006030; path=/; domain=.weibo.cn; HttpOnly
+731081 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << Set-Cookie: MLOGIN=0; expires=Sat, 21-Mar-2020 15:22:00 GMT; Max-Age=3600; path=/; domain=.weibo.cn
+731081 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << X-Log-Uid: 
+731081 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << Content-Security-Policy: upgrade-insecure-requests
+731081 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << PROC_NODE: mweibo-10-22-3-30.xxg.intra.weibo.cn
+731081 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << Content-Encoding: gzip
+731081 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << SSL_NODE: ssl-002.mweibo.dbl.intra.weibo.cn
+731081 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << LB: 39.156.6.59
+731081 DEBUG [2020-03-21 22:21:58]  http-outgoing-60 << Cache-Control: no-cache
+731081 DEBUG [2020-03-21 22:21:58]  Connection can be kept alive indefinitely
+731081 DEBUG [2020-03-21 22:21:58]  Cookie accepted [_T_WM="65409199027", version:0, domain:weibo.cn, path:/, expiry:Tue Mar 31 22:22:00 CST 2020]
+731081 DEBUG [2020-03-21 22:21:58]  Cookie accepted [XSRF-TOKEN="deleted", version:0, domain:weibo.cn, path:/, expiry:Thu Jan 01 08:00:01 CST 1970]
+731082 DEBUG [2020-03-21 22:21:58]  Cookie accepted [XSRF-TOKEN="fb0fd1", version:0, domain:m.weibo.cn, path:/, expiry:Sat Mar 21 22:42:00 CST 2020]
+731082 DEBUG [2020-03-21 22:21:58]  Cookie accepted [WEIBOCN_FROM="1110006030", version:0, domain:weibo.cn, path:/, expiry:null]
+731082 DEBUG [2020-03-21 22:21:58]  Cookie accepted [MLOGIN="0", version:0, domain:weibo.cn, path:/, expiry:Sat Mar 21 23:22:00 CST 2020]
+731082 DEBUG [2020-03-21 22:21:58]  Connection [id: 60][route: {s}->https://m.weibo.cn:443] can be kept alive indefinitely
+731082 DEBUG [2020-03-21 22:21:58]  Connection released: [id: 60][route: {s}->https://m.weibo.cn:443][total kept alive: 2; route allocated: 1 of 2; total allocated: 2 of 20]
+731082 DEBUG [2020-03-21 22:21:58]  Connection manager is shutting down
+731082 DEBUG [2020-03-21 22:21:58]  http-outgoing-60: Close connection
+731082 DEBUG [2020-03-21 22:21:58]  http-outgoing-59: Close connection
+731083 DEBUG [2020-03-21 22:21:58]  Connection manager shut down
+731085 DEBUG [2020-03-21 22:21:58]  CookieSpec selected: default
+731085 DEBUG [2020-03-21 22:21:58]  Auth cache not set in the context
+731085 DEBUG [2020-03-21 22:21:58]  Connection request: [route: {}->http://m.weibo.cn:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+731085 DEBUG [2020-03-21 22:21:58]  Connection leased: [id: 61][route: {}->http://m.weibo.cn:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+731085 DEBUG [2020-03-21 22:21:58]  Opening connection {}->http://m.weibo.cn:80
+731085 DEBUG [2020-03-21 22:21:58]  Connecting to m.weibo.cn/39.156.6.59:80
+731785 DEBUG [2020-03-21 22:21:59]  Connection established 192.168.0.100:38062<->39.156.6.59:80
+731785 DEBUG [2020-03-21 22:21:59]  Executing request GET /statuses/extend?id=4482096116803463 HTTP/1.1
+731785 DEBUG [2020-03-21 22:21:59]  Target auth state: UNCHALLENGED
+731785 DEBUG [2020-03-21 22:21:59]  Proxy auth state: UNCHALLENGED
+731785 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 >> GET /statuses/extend?id=4482096116803463 HTTP/1.1
+731785 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 >> User-Agent: Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)
+731785 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 >> Host: m.weibo.cn
+731785 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 >> Connection: Keep-Alive
+731785 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 >> Accept-Encoding: gzip,deflate
+731785 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 >> "GET /statuses/extend?id=4482096116803463 HTTP/1.1[\r][\n]"
+731785 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 >> "User-Agent: Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)[\r][\n]"
+731785 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 >> "Host: m.weibo.cn[\r][\n]"
+731785 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 >> "Connection: Keep-Alive[\r][\n]"
+731785 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+731785 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 >> "[\r][\n]"
+731901 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 << "HTTP/1.1 302 Moved Temporarily[\r][\n]"
+731901 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 << "Server: Tengine/2.3.0[\r][\n]"
+731901 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 << "Date: Sat, 21 Mar 2020 14:22:01 GMT[\r][\n]"
+731901 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 << "Content-Type: text/html[\r][\n]"
+731901 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 << "Content-Length: 221[\r][\n]"
+731901 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 << "Connection: keep-alive[\r][\n]"
+731901 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 << "Location: https://m.weibo.cn/statuses/extend?id=4482096116803463[\r][\n]"
+731901 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 << "SSL_NODE: ssl-007.mweibo.dbl.intra.weibo.cn[\r][\n]"
+731901 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 << "LB: 39.156.6.59[\r][\n]"
+731901 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 << "Cache-Control: no-cache[\r][\n]"
+731901 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 << "[\r][\n]"
+731901 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 << "<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">[\r][\n]"
+731901 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 << "<html>[\r][\n]"
+731901 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 << "<head><title>302 Found</title></head>[\r][\n]"
+731901 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 << "<body>[\r][\n]"
+731901 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 << "<center><h1>302 Found</h1></center>[\r][\n]"
+731901 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 << "<hr/>Powered by Tengine/2.3.0<hr><center>tengine</center>[\r][\n]"
+731901 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 << "</body>[\r][\n]"
+731901 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 << "</html>[\r][\n]"
+731901 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 << HTTP/1.1 302 Moved Temporarily
+731901 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 << Server: Tengine/2.3.0
+731901 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 << Date: Sat, 21 Mar 2020 14:22:01 GMT
+731901 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 << Content-Type: text/html
+731901 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 << Content-Length: 221
+731901 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 << Connection: keep-alive
+731901 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 << Location: https://m.weibo.cn/statuses/extend?id=4482096116803463
+731901 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 << SSL_NODE: ssl-007.mweibo.dbl.intra.weibo.cn
+731901 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 << LB: 39.156.6.59
+731901 DEBUG [2020-03-21 22:21:59]  http-outgoing-61 << Cache-Control: no-cache
+731901 DEBUG [2020-03-21 22:21:59]  Connection can be kept alive indefinitely
+731901 DEBUG [2020-03-21 22:21:59]  Redirect requested to location 'https://m.weibo.cn/statuses/extend?id=4482096116803463'
+731901 DEBUG [2020-03-21 22:21:59]  Resetting target auth state
+731901 DEBUG [2020-03-21 22:21:59]  Redirecting to 'https://m.weibo.cn/statuses/extend?id=4482096116803463' via {s}->https://m.weibo.cn:443
+731901 DEBUG [2020-03-21 22:21:59]  Connection [id: 61][route: {}->http://m.weibo.cn:80] can be kept alive indefinitely
+731901 DEBUG [2020-03-21 22:21:59]  Connection released: [id: 61][route: {}->http://m.weibo.cn:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+731902 DEBUG [2020-03-21 22:21:59]  CookieSpec selected: default
+731902 DEBUG [2020-03-21 22:21:59]  Auth cache not set in the context
+731902 DEBUG [2020-03-21 22:21:59]  Connection request: [route: {s}->https://m.weibo.cn:443][total kept alive: 1; route allocated: 0 of 2; total allocated: 1 of 20]
+731902 DEBUG [2020-03-21 22:21:59]  Connection leased: [id: 62][route: {s}->https://m.weibo.cn:443][total kept alive: 1; route allocated: 1 of 2; total allocated: 2 of 20]
+731902 DEBUG [2020-03-21 22:21:59]  Opening connection {s}->https://m.weibo.cn:443
+731902 DEBUG [2020-03-21 22:21:59]  Connecting to m.weibo.cn/39.156.6.59:443
+731902 DEBUG [2020-03-21 22:21:59]  Connecting socket to m.weibo.cn/39.156.6.59:443 with timeout 0
+731996 DEBUG [2020-03-21 22:21:59]  Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]
+731996 DEBUG [2020-03-21 22:21:59]  Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+731996 DEBUG [2020-03-21 22:21:59]  Starting handshake
+732041 INFO  [2020-03-21 22:21:59]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+732391 DEBUG [2020-03-21 22:22:00]  Secure session established
+732391 DEBUG [2020-03-21 22:22:00]   negotiated protocol: TLSv1.2
+732391 DEBUG [2020-03-21 22:22:00]   negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+732391 DEBUG [2020-03-21 22:22:00]   peer principal: CN=weibo.cn, OU="Sina.com Technology(China)Co.,ltd", O="Sina.com Technology(China)Co.,ltd", ST=Beijing, C=CN
+732391 DEBUG [2020-03-21 22:22:00]   peer alternative names: [weibo.cn, www.weibo.cn, company.admin.weibo.com, *.movie.weibo.com, *.edm.weibo.cn, *.qr.weibo.cn, *.music.weibo.com, *.krcom.cn, krcom.cn, *.weibo.cn, admin.event.weibo.com, *.music.sina.com.cn, *.sina.cn, *.sinaimg.cn, *.oasis.weibo.cn, *.api.weibo.cn, *.chengdu.weibo.cn, *.ting.weibo.com, *.weibo.com, *.forecast.sina.cn, *.photo.weibo.com, *.h5.weibo.cn, *.sina.com.cn, *.media.weibo.com, agent.star.weibo.com, *.sinajs.cn, *.star.weibo.com, company.verified.weibo.com]
+732391 DEBUG [2020-03-21 22:22:00]   issuer principal: CN=GeoTrust CN RSA CA G1, OU=www.digicert.com, O=DigiCert Inc, C=US
+732391 DEBUG [2020-03-21 22:22:00]  Connection established 192.168.0.100:38065<->39.156.6.59:443
+732391 DEBUG [2020-03-21 22:22:00]  Executing request GET /statuses/extend?id=4482096116803463 HTTP/1.1
+732391 DEBUG [2020-03-21 22:22:00]  Target auth state: UNCHALLENGED
+732391 DEBUG [2020-03-21 22:22:00]  Proxy auth state: UNCHALLENGED
+732391 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 >> GET /statuses/extend?id=4482096116803463 HTTP/1.1
+732391 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 >> User-Agent: Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)
+732391 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 >> Host: m.weibo.cn
+732391 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 >> Connection: Keep-Alive
+732391 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 >> Accept-Encoding: gzip,deflate
+732391 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 >> "GET /statuses/extend?id=4482096116803463 HTTP/1.1[\r][\n]"
+732391 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 >> "User-Agent: Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)[\r][\n]"
+732391 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 >> "Host: m.weibo.cn[\r][\n]"
+732391 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 >> "Connection: Keep-Alive[\r][\n]"
+732391 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+732391 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 >> "[\r][\n]"
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << "HTTP/1.1 200 OK[\r][\n]"
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << "Server: Tengine/2.3.0[\r][\n]"
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << "Date: Sat, 21 Mar 2020 14:22:01 GMT[\r][\n]"
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << "Content-Type: application/json; charset=utf-8[\r][\n]"
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << "Transfer-Encoding: chunked[\r][\n]"
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << "Connection: keep-alive[\r][\n]"
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << "Vary: Accept-Encoding[\r][\n]"
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << "X-Powered-By: PHP/7.2.1[\r][\n]"
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << "Set-Cookie: _T_WM=38615105753; expires=Tue, 31-Mar-2020 14:22:01 GMT; Max-Age=864000; path=/; domain=.weibo.cn[\r][\n]"
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << "Set-Cookie: XSRF-TOKEN=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/; domain=.weibo.cn[\r][\n]"
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << "Set-Cookie: XSRF-TOKEN=b45443; expires=Sat, 21-Mar-2020 14:42:01 GMT; Max-Age=1200; path=/; domain=m.weibo.cn[\r][\n]"
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << "Set-Cookie: WEIBOCN_FROM=1110006030; path=/; domain=.weibo.cn; HttpOnly[\r][\n]"
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << "Set-Cookie: MLOGIN=0; expires=Sat, 21-Mar-2020 15:22:01 GMT; Max-Age=3600; path=/; domain=.weibo.cn[\r][\n]"
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << "X-Log-Uid: [\r][\n]"
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << "Content-Security-Policy: upgrade-insecure-requests[\r][\n]"
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << "PROC_NODE: mweibo-10-22-3-83.xxg.intra.weibo.cn[\r][\n]"
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << "Content-Encoding: gzip[\r][\n]"
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << "SSL_NODE: ssl-011.mweibo.dbl.intra.weibo.cn[\r][\n]"
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << "LB: 39.156.6.59[\r][\n]"
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << "Cache-Control: no-cache[\r][\n]"
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << "[\r][\n]"
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << "318[\r][\n]"
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << "[0x1f][0x8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x3][0xbd]UK[0x8f][0xd3]0[0x10][0xfe]+QP[0xe8]e[0xd9][0xfa][0x11][0xbf]J[[0xd4]e[0x8b][0x10][0x7]N[0x1c]#Un[0xec]l"[0xd2][0xa6]$[0xe][0xb][0xac][0xf8][0xef][0xcc][0xb8][0xdb]}[0x14][0x81]8q[0xb1]'[0xf3][0x9e][0xcf]3[0x93][0xbb][0xb4][0xfb][0x9c][0xce][0xe8]E[0xea]l[0xb0][0xe9][0xec][0xee][0xf4][0xd9]v[0xfb][0x9b]O[0xfe][x[0xdb][0xed][0x83][0xdf][0x87]t[0x96][0x16]#'[0x94][0xcc]m[0x92][0xd4][0xbd][0xaf][0x16]EZ[0x87]p[0x18]f[0xc5][0xb4][0x98][0xee].o}[0xb3][0xed].[0xcb]}1[0x1d][0xbc][0xed][0xcb][0xfa]M[0x9]v[0xb6][0xd9][0xfb][0xbe]q[0xb][0xc6][0xa9]`,|?[0xf8][0x8c]_[0xd3][0x8c][0xc9][0x80]7[0x1][0xe2][0xb][0x10][0x19][0xe3][0xd9]Zd[0xab]<[0xd3][0xd7]H\[0xa9]l%[0x90]0$[0xd3][0xeb]l[0xad]2M[0xb3][0xd5]U[0xb6]6[0x99][0x1][0x1d]q[0xaf]l$[0x12]`[0x82][0xc4]QD[0x90][0xd0][0xa0][0xff][0xee]^g[0xa5]"[0xc1]2[0xb3][0x86](/[0xa1][0x9c][0x83][0xed][0xed]n[0xf1][0xdf]B[0x16]i[0x82][0xb8][0xbe][0xaa][0x1b][0xe7][0x1][0xb1]"][0xce][0x87][0x83][0xdd]'ek[0x87][0x1][0x18][0xc3][0xd8][0xb7][0xaf][0x2][0xe4][0x5][0x92][0x17][0xc5]([0xc]qp:/[0xe0][0xcc][0x89]/FE[0xe4][0xb6][0x18][0x8d] [0xc8]1T[0xc2][0xc9][0x85][0x8c][0x1c][0x2]'-+[0xe4]3[0x5][0xa7]6[0xfe][0xc5][0x1c][0xf0][0x7][0xff]K[0xb8][0xed]2)F[0xc9]([0xaa][0x91][0xca]=7Q[V[0x16]c[0xee][0x9][0x1][0xa5][0xbc][0x92] [0x90][\n]"
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << "[0xc5][0x92]T<[0xc6][0x86]SI[0x9d][0xa3][0x12][0x5]UmTu[0xe2][0xb][0xc6][0x9][0xf2]5f[0x93]S[0x88]]U[0xb4][0x8a][0xed]A[0xd1][0x8f]#[0xcf]s[0x15]^[0xa1][0x15][0xaf][0x8e]r[0x11][0xab][0xe3][0x8e][0xa2][0xe4]1[0xe]'[0xc4]Bz&&l[0xa4]?[0xf3][0xf1][0x4][0x19][0xe9][0xb4][0x86][0x8c][0x1c]7X[0xa0][0x8d]X[0xe5]6z[0x0][0xac][0xa4][0xe4][0x88][0x9b][0xe1][0x16][0xf3]"[0x90][0xbb][0x91][0x1a]KV99C8[0xd2][0xb9][0xb7][0xea][0xa4][0xf9]'[0xb4][0xf5][0xd6][0xb2]H[0x8b]3[0xcc]}.[0x8e][0xc8][0xa3][0x15]"t[0xf4][0x3][0xc0][0x9a][0x13][0xf8]B[0xe4][0xe8]g[0xbb][0x95]g[0x15]=[0xf1][0xa6][0x9d][0x6]Z[0x9][0xbb]Ets[0x17]k[0xc1][0x88]TB[0xa5]B[0xe2][0xf3][0xfd]S'D[[0xc1]s[0xc4]V[0x95]>"[0x8c]~[0x18]A}[0xc6]">,[0xe6]I[0xed][0xf3][0xf6][0x80][0x88]h[0xc5][0xf1]=[0x1][0x93][0xf2][0xc4][0x81]ZP[0xd3])u[0xe2]H%#[0x86][0xce]?X[0xf9][0xd8][0x1d]O9\[0x9c][0xf9][0x81][0xc][0xd1]*v[0xcd][0x91][0xa3]Yyf%K|Y#9[0x8c][0x1e][0xbb][0x8f][0x9b][0xa3][0xe]K[0xe6][0xdb]>)[0xa6]KXCq[0xb0]`~[0xee]7Q\D![0xae][0xa0][0x95][0xfc]!>[0xdc][0xb6][0xef]a[0xfa]~[U_a[0x12][0xbb][0xd3][0xba][0xea]v0/uw[0xfb][0xa6][0x82]-E[0x9][0xcf]gy[0xae][0xa9][0x14][0x8a]qhA[\n]"
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << "[0xf0][0xfc]}[0x80]'8[0xbe][\r][0xac][0xba][0xc9]r[0xde][0xec]n[0x92]!|o[0xfd]br[0xdb][0xb8]P[0xcf][0x12][0xda][0xfb][0xdd][0xeb][0xda]77u8~L[0x92][0xa1]/[0x17][0x93][0xc7]djq94{[0xb][0xa6]1[0xef][0xf1][0xd0]v[0xd6][0x15]SF[0xa8]([0xa6][0xd0]BS[0x6]7[0x87][0xb2][0x9a][0x9d]oa[0x99]nJ[0xdb][0xbb][0xcd][0xb0][0xb3]m[0xbb][0x89][0x85]l[0x9c][0xaf][0xec][0xd8][0x86][0xcb][0xc3][0xfe]f[0xb2]|[0x98][0xfe]?[0xee][0x98][0x8f]W[0xd7]8[0xcb]%[0xf6][0x8d]6[0xf4]4{[0xa2][0xb2]>[0xbe][0x99]}*}[0xb6]L[0xd2][0x8b][0xb4][0xf7][0x87]n[0x8][0xc3][0xa6][0xec]F[0xfc]![0xb0][0x8b][0x14][0x0][0xdc][0xc1][0xcf][0xe1][0x81]E.R[0x1b]B[0x13]F[0xe7][0x1f]xT[0xfd][0xfc][0xf9][0xb][0x9b][0xc][0x98][0x91]e[0x6][0x0][0x0][\r][\n]"
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << "0[\r][\n]"
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << "[\r][\n]"
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << HTTP/1.1 200 OK
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << Server: Tengine/2.3.0
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << Date: Sat, 21 Mar 2020 14:22:01 GMT
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << Content-Type: application/json; charset=utf-8
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << Transfer-Encoding: chunked
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << Connection: keep-alive
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << Vary: Accept-Encoding
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << X-Powered-By: PHP/7.2.1
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << Set-Cookie: _T_WM=38615105753; expires=Tue, 31-Mar-2020 14:22:01 GMT; Max-Age=864000; path=/; domain=.weibo.cn
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << Set-Cookie: XSRF-TOKEN=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/; domain=.weibo.cn
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << Set-Cookie: XSRF-TOKEN=b45443; expires=Sat, 21-Mar-2020 14:42:01 GMT; Max-Age=1200; path=/; domain=m.weibo.cn
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << Set-Cookie: WEIBOCN_FROM=1110006030; path=/; domain=.weibo.cn; HttpOnly
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << Set-Cookie: MLOGIN=0; expires=Sat, 21-Mar-2020 15:22:01 GMT; Max-Age=3600; path=/; domain=.weibo.cn
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << X-Log-Uid: 
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << Content-Security-Policy: upgrade-insecure-requests
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << PROC_NODE: mweibo-10-22-3-83.xxg.intra.weibo.cn
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << Content-Encoding: gzip
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << SSL_NODE: ssl-011.mweibo.dbl.intra.weibo.cn
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << LB: 39.156.6.59
+732516 DEBUG [2020-03-21 22:22:00]  http-outgoing-62 << Cache-Control: no-cache
+732516 DEBUG [2020-03-21 22:22:00]  Connection can be kept alive indefinitely
+732517 DEBUG [2020-03-21 22:22:00]  Cookie accepted [_T_WM="38615105753", version:0, domain:weibo.cn, path:/, expiry:Tue Mar 31 22:22:01 CST 2020]
+732517 DEBUG [2020-03-21 22:22:00]  Cookie accepted [XSRF-TOKEN="deleted", version:0, domain:weibo.cn, path:/, expiry:Thu Jan 01 08:00:01 CST 1970]
+732517 DEBUG [2020-03-21 22:22:00]  Cookie accepted [XSRF-TOKEN="b45443", version:0, domain:m.weibo.cn, path:/, expiry:Sat Mar 21 22:42:01 CST 2020]
+732517 DEBUG [2020-03-21 22:22:00]  Cookie accepted [WEIBOCN_FROM="1110006030", version:0, domain:weibo.cn, path:/, expiry:null]
+732517 DEBUG [2020-03-21 22:22:00]  Cookie accepted [MLOGIN="0", version:0, domain:weibo.cn, path:/, expiry:Sat Mar 21 23:22:01 CST 2020]
+732517 DEBUG [2020-03-21 22:22:00]  Connection [id: 62][route: {s}->https://m.weibo.cn:443] can be kept alive indefinitely
+732517 DEBUG [2020-03-21 22:22:00]  Connection released: [id: 62][route: {s}->https://m.weibo.cn:443][total kept alive: 2; route allocated: 1 of 2; total allocated: 2 of 20]
+732517 DEBUG [2020-03-21 22:22:00]  Connection manager is shutting down
+732517 DEBUG [2020-03-21 22:22:00]  http-outgoing-62: Close connection
+732517 DEBUG [2020-03-21 22:22:00]  http-outgoing-61: Close connection
+732517 DEBUG [2020-03-21 22:22:00]  Connection manager shut down
+732519 DEBUG [2020-03-21 22:22:00]  CookieSpec selected: default
+732519 DEBUG [2020-03-21 22:22:00]  Auth cache not set in the context
+732519 DEBUG [2020-03-21 22:22:00]  Connection request: [route: {}->http://m.weibo.cn:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+732519 DEBUG [2020-03-21 22:22:00]  Connection leased: [id: 63][route: {}->http://m.weibo.cn:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+732519 DEBUG [2020-03-21 22:22:00]  Opening connection {}->http://m.weibo.cn:80
+732519 DEBUG [2020-03-21 22:22:00]  Connecting to m.weibo.cn/39.156.6.59:80
+732599 DEBUG [2020-03-21 22:22:00]  Connection established 192.168.0.100:38066<->39.156.6.59:80
+732599 DEBUG [2020-03-21 22:22:00]  Executing request GET /statuses/extend?id=4481712195204379 HTTP/1.1
+732599 DEBUG [2020-03-21 22:22:00]  Target auth state: UNCHALLENGED
+732599 DEBUG [2020-03-21 22:22:00]  Proxy auth state: UNCHALLENGED
+732599 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 >> GET /statuses/extend?id=4481712195204379 HTTP/1.1
+732599 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 >> User-Agent: Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)
+732599 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 >> Host: m.weibo.cn
+732599 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 >> Connection: Keep-Alive
+732599 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 >> Accept-Encoding: gzip,deflate
+732599 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 >> "GET /statuses/extend?id=4481712195204379 HTTP/1.1[\r][\n]"
+732599 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 >> "User-Agent: Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)[\r][\n]"
+732599 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 >> "Host: m.weibo.cn[\r][\n]"
+732599 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 >> "Connection: Keep-Alive[\r][\n]"
+732599 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+732599 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 >> "[\r][\n]"
+732689 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 << "HTTP/1.1 302 Moved Temporarily[\r][\n]"
+732689 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 << "Server: Tengine/2.3.0[\r][\n]"
+732689 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 << "Date: Sat, 21 Mar 2020 14:22:02 GMT[\r][\n]"
+732689 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 << "Content-Type: text/html[\r][\n]"
+732689 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 << "Content-Length: 221[\r][\n]"
+732689 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 << "Connection: keep-alive[\r][\n]"
+732689 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 << "Location: https://m.weibo.cn/statuses/extend?id=4481712195204379[\r][\n]"
+732689 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 << "SSL_NODE: ssl-013.mweibo.dbl.intra.weibo.cn[\r][\n]"
+732689 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 << "LB: 39.156.6.59[\r][\n]"
+732689 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 << "Cache-Control: no-cache[\r][\n]"
+732689 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 << "[\r][\n]"
+732689 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 << "<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">[\r][\n]"
+732689 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 << "<html>[\r][\n]"
+732689 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 << "<head><title>302 Found</title></head>[\r][\n]"
+732689 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 << "<body>[\r][\n]"
+732689 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 << "<center><h1>302 Found</h1></center>[\r][\n]"
+732689 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 << "<hr/>Powered by Tengine/2.3.0<hr><center>tengine</center>[\r][\n]"
+732690 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 << "</body>[\r][\n]"
+732690 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 << "</html>[\r][\n]"
+732690 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 << HTTP/1.1 302 Moved Temporarily
+732690 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 << Server: Tengine/2.3.0
+732690 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 << Date: Sat, 21 Mar 2020 14:22:02 GMT
+732690 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 << Content-Type: text/html
+732690 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 << Content-Length: 221
+732690 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 << Connection: keep-alive
+732690 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 << Location: https://m.weibo.cn/statuses/extend?id=4481712195204379
+732690 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 << SSL_NODE: ssl-013.mweibo.dbl.intra.weibo.cn
+732690 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 << LB: 39.156.6.59
+732690 DEBUG [2020-03-21 22:22:00]  http-outgoing-63 << Cache-Control: no-cache
+732690 DEBUG [2020-03-21 22:22:00]  Connection can be kept alive indefinitely
+732690 DEBUG [2020-03-21 22:22:00]  Redirect requested to location 'https://m.weibo.cn/statuses/extend?id=4481712195204379'
+732690 DEBUG [2020-03-21 22:22:00]  Resetting target auth state
+732690 DEBUG [2020-03-21 22:22:00]  Redirecting to 'https://m.weibo.cn/statuses/extend?id=4481712195204379' via {s}->https://m.weibo.cn:443
+732690 DEBUG [2020-03-21 22:22:00]  Connection [id: 63][route: {}->http://m.weibo.cn:80] can be kept alive indefinitely
+732691 DEBUG [2020-03-21 22:22:00]  Connection released: [id: 63][route: {}->http://m.weibo.cn:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+732691 DEBUG [2020-03-21 22:22:00]  CookieSpec selected: default
+732691 DEBUG [2020-03-21 22:22:00]  Auth cache not set in the context
+732691 DEBUG [2020-03-21 22:22:00]  Connection request: [route: {s}->https://m.weibo.cn:443][total kept alive: 1; route allocated: 0 of 2; total allocated: 1 of 20]
+732691 DEBUG [2020-03-21 22:22:00]  Connection leased: [id: 64][route: {s}->https://m.weibo.cn:443][total kept alive: 1; route allocated: 1 of 2; total allocated: 2 of 20]
+732691 DEBUG [2020-03-21 22:22:00]  Opening connection {s}->https://m.weibo.cn:443
+732691 DEBUG [2020-03-21 22:22:00]  Connecting to m.weibo.cn/39.156.6.59:443
+732691 DEBUG [2020-03-21 22:22:00]  Connecting socket to m.weibo.cn/39.156.6.59:443 with timeout 0
+732804 DEBUG [2020-03-21 22:22:00]  Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]
+732804 DEBUG [2020-03-21 22:22:00]  Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+732804 DEBUG [2020-03-21 22:22:00]  Starting handshake
+733041 INFO  [2020-03-21 22:22:00]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+733104 DEBUG [2020-03-21 22:22:00]  Secure session established
+733104 DEBUG [2020-03-21 22:22:00]   negotiated protocol: TLSv1.2
+733104 DEBUG [2020-03-21 22:22:00]   negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+733104 DEBUG [2020-03-21 22:22:00]   peer principal: CN=weibo.cn, OU="Sina.com Technology(China)Co.,ltd", O="Sina.com Technology(China)Co.,ltd", ST=Beijing, C=CN
+733105 DEBUG [2020-03-21 22:22:00]   peer alternative names: [weibo.cn, www.weibo.cn, company.admin.weibo.com, *.movie.weibo.com, *.edm.weibo.cn, *.qr.weibo.cn, *.music.weibo.com, *.krcom.cn, krcom.cn, *.weibo.cn, admin.event.weibo.com, *.music.sina.com.cn, *.sina.cn, *.sinaimg.cn, *.oasis.weibo.cn, *.api.weibo.cn, *.chengdu.weibo.cn, *.ting.weibo.com, *.weibo.com, *.forecast.sina.cn, *.photo.weibo.com, *.h5.weibo.cn, *.sina.com.cn, *.media.weibo.com, agent.star.weibo.com, *.sinajs.cn, *.star.weibo.com, company.verified.weibo.com]
+733105 DEBUG [2020-03-21 22:22:00]   issuer principal: CN=GeoTrust CN RSA CA G1, OU=www.digicert.com, O=DigiCert Inc, C=US
+733105 DEBUG [2020-03-21 22:22:00]  Connection established 192.168.0.100:38067<->39.156.6.59:443
+733105 DEBUG [2020-03-21 22:22:00]  Executing request GET /statuses/extend?id=4481712195204379 HTTP/1.1
+733105 DEBUG [2020-03-21 22:22:00]  Target auth state: UNCHALLENGED
+733105 DEBUG [2020-03-21 22:22:00]  Proxy auth state: UNCHALLENGED
+733105 DEBUG [2020-03-21 22:22:00]  http-outgoing-64 >> GET /statuses/extend?id=4481712195204379 HTTP/1.1
+733105 DEBUG [2020-03-21 22:22:00]  http-outgoing-64 >> User-Agent: Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)
+733105 DEBUG [2020-03-21 22:22:00]  http-outgoing-64 >> Host: m.weibo.cn
+733105 DEBUG [2020-03-21 22:22:00]  http-outgoing-64 >> Connection: Keep-Alive
+733105 DEBUG [2020-03-21 22:22:00]  http-outgoing-64 >> Accept-Encoding: gzip,deflate
+733105 DEBUG [2020-03-21 22:22:00]  http-outgoing-64 >> "GET /statuses/extend?id=4481712195204379 HTTP/1.1[\r][\n]"
+733105 DEBUG [2020-03-21 22:22:00]  http-outgoing-64 >> "User-Agent: Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)[\r][\n]"
+733105 DEBUG [2020-03-21 22:22:00]  http-outgoing-64 >> "Host: m.weibo.cn[\r][\n]"
+733105 DEBUG [2020-03-21 22:22:00]  http-outgoing-64 >> "Connection: Keep-Alive[\r][\n]"
+733105 DEBUG [2020-03-21 22:22:00]  http-outgoing-64 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+733105 DEBUG [2020-03-21 22:22:00]  http-outgoing-64 >> "[\r][\n]"
+733359 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << "HTTP/1.1 200 OK[\r][\n]"
+733359 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << "Server: Tengine/2.3.0[\r][\n]"
+733359 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << "Date: Sat, 21 Mar 2020 14:22:02 GMT[\r][\n]"
+733359 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << "Content-Type: application/json; charset=utf-8[\r][\n]"
+733359 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << "Transfer-Encoding: chunked[\r][\n]"
+733359 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << "Connection: keep-alive[\r][\n]"
+733359 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << "Vary: Accept-Encoding[\r][\n]"
+733359 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << "X-Powered-By: PHP/7.2.1[\r][\n]"
+733359 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << "Set-Cookie: _T_WM=59372866455; expires=Tue, 31-Mar-2020 14:22:02 GMT; Max-Age=864000; path=/; domain=.weibo.cn[\r][\n]"
+733359 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << "Set-Cookie: XSRF-TOKEN=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/; domain=.weibo.cn[\r][\n]"
+733359 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << "Set-Cookie: XSRF-TOKEN=460e74; expires=Sat, 21-Mar-2020 14:42:02 GMT; Max-Age=1200; path=/; domain=m.weibo.cn[\r][\n]"
+733359 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << "Set-Cookie: WEIBOCN_FROM=1110006030; path=/; domain=.weibo.cn; HttpOnly[\r][\n]"
+733359 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << "Set-Cookie: MLOGIN=0; expires=Sat, 21-Mar-2020 15:22:02 GMT; Max-Age=3600; path=/; domain=.weibo.cn[\r][\n]"
+733359 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << "X-Log-Uid: [\r][\n]"
+733359 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << "Content-Security-Policy: upgrade-insecure-requests[\r][\n]"
+733359 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << "PROC_NODE: mweibo-10-13-112-214.bx.intra.weibo.cn[\r][\n]"
+733359 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << "Content-Encoding: gzip[\r][\n]"
+733359 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << "SSL_NODE: ssl-007.mweibo.dbl.intra.weibo.cn[\r][\n]"
+733359 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << "LB: 39.156.6.59[\r][\n]"
+733359 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << "Cache-Control: no-cache[\r][\n]"
+733359 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << "[\r][\n]"
+733359 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << "392[\r][\n]"
+733359 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << "[0x1f][0x8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x3][0xc5]U[0xdb]r[0x9c]8[0x10][0xfd][0x15][0x8a][0x14];/[0xb6]G[0x17]$[0xa4]Y[0xdb])|[0xc9][0x17][0xec][0xdb][0xb2]5%[0x84]0T`[0x98][0x5][0x11]o6[0x95]O[0xb7][0x18][0xbc][0x9e][0xb8][0x92]<[0xee][0xb][0x88][0xa6]u[0xba][0xfb][0x1c]u[0xeb]K<|[0x8c]w[0xf4]"[0xae][0x8c]7[0xf1][0xee][0xcb][0xfa][0xd9][\r][0x87][0xa7]?[0xdc]?[0xfe]~8xw[0xf0][0xf1]..fN()f[0xc1][0x95][0x86]gY[0xf2]bN[0x9d][0x92][0xc5]\[0xd7][0x84]^[0x9b](jFW[0xdf][0x14]q[0xe3][0xfd]q[0xda][0x15][0xdb]b[0xdb]_=[0xbb][0xb6][0x1c][0xae][0xec][0xa1][0xd8]N[0xce][0x8c][0xb6]yo[0x1][0xcf][0xb4][0x7]7[0xb6][0xd5][\r][0xe3]T0[0xe6]?[0x1f]][0xc2][0x1f]h[0xc2][0xa4][0xc7]7[0x81][0xc5][0xdf][0xb0]H[0x18]O[0x1e][0xb3]D[0xa7]I[0xae][0x92]G[0x99][0xe4][0xf][0xc9][0xdd]=#[0xb8]Ty[0xa2][0xc2]B[0xdf]'[0xf9][0x87][0xe4]Q$J%w2[0xfc]R[0x89]&[0xc1]"[0xc2]>[0x95][0xa8],[0xc9][0xf3]`[0xc9][0x83][0x5][0x16][0x1f][0x92]<`[0xdf]=$[0xb9]>[0xe1][0xdc][0xe5][0x10][0xf0]7[0xa8][0xf8]hF[0xd3][0xdf][0xfc][0x1f][0xd1][0x8b]8B[0x15].[0x9b][0xb6]r[0xc0]c[0x11][0xdf]^OGs[0x88]lg[0xa6][0x9][0xc][0xd3]<v[0x97][0x1e]R[0x84]?[0xef][0x8a]9[0x13]L[0x15][0xb3],3[0xcb]@[0x16][0xc9][0x14]>3V[0x83]8[0x8c]K[0xb4][0x4][0xb9][0xa8][0x4]/E[0x9d]A[0xbb]Q([0xa0][0x3][0xe9][0xb2]Zj[0xf4][0xe7][0xe6][0xdd]5[0xa8][0x3]qn[0xe1]mn[0x83][0xcc][0x14][0xa5][0xe5][0xcb][0xe][0xc4][0xa8]]y[0xbe]/[0x13][0xb4]F[0x1f][0x93][0x5][0xf9]-[0xae]Y[0x5]>[0xb2][0x86][0xa7]b[0xc][0xf6]f&3h/[0x11][0xc7][0xe9]t[0xcd]x[0xc9]N[0x93][0x90]5d[0x89]irB[0xe8][0xe9][0x13][0xed]ZUn[0xc9][0xe]vI[0x5]{[0xa5][0xc8]0[0x93]Rd[0x98][0x9][0x95][0xe7][0x15]/9d[0x8a][0xa6]+>$h~U[0xfd][0xeb]*[0x96]X'[0x1c][0xe9][0x1c][0xfa][0xa7]XQU3[0xf4]![0xc0]@[0xe6][0xca][0x1a][0xe3]j[0xf1][0xaa][0xf6][0x90][0xb6]E[0xd6]yMV[0x1c]![0xe5][0x12][0xb][0xec][0xaa][0xc6]Z2[0xe7][0x2][0x9a][0xc3][0xbd][0xb5][0xb0][0xc]3[0xb5][0x4][0xf1]D[0xbd]4[0x91][0xa5][0x18][0x94] 9[0xa9]F@[0xcb][0xc1][0xa2][0x8]R[0x8a][0xe1]([0x9][0xed][0x17]jyUE][0xd3]2[0xa0][0xbd][0x89][0xbf]0w[0xa6][0xb7]p/[0xb9]/[0xc0][0xaa]R[0x82]#0[0x94][0x98][0xad][0xf0]KYY[0x86]E3B[0xed][0xb9][0xa4][0xd2]"[0xcd][0xaa]B1[0xe1]o[0xf5][0xf6]HA[0x5]"[0xc3][\n]"
+733359 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << "[0x84][0x84]pRq@fT[0xa3][0xf])5[0xee][0x15][0xee][0xe7]G[0xe6][0xfc][0xe4][0xe3][0xc1]oat`K[0xb4][0xfd]Sd:[0xf3][0xe7]w[0x0][0x0][0xf9]W4[0x8d][0x16];[0x7]fO#[0xae][0xa6][0xf6]`[0xc0];[0x8c][0x9f][0xbe][0xd8][0xba]~[0xf0][0x1]d[0xbb]<[0x7][0xdf][0xb8]q*[0xb6][0xd5][0xde]6[0x87][0xae][0xfd][0xe8].[0x99][0x95]u[0xaa]Xe[0xec][0xd5][0xf1][0xf0][0x4][0xed]8[0xf9][0xcf][0x1d][0xb6][0xe2]s[[0xf9]fG][0xff]{[0xd4][0xb8][0xf6][0xa9][0xf1]a[\r][0xe][0xc5][0xf6]v[0xed][0x9e][0xc0][0x1a][0x1e][0xb6][0xb2]$H.[0x11][0xa8]&EKj[0xf5][0xf2][0x8c][0x2]=xb,W[0x81][0x18]4)[0xa2][0xe5]j[0xd2][0xb4][0xa2][0x1]IG[0xd7][0xe5][0x18][0xf0][0xcd]2[0x15][0x80][0x83][0xd3]p[\r][0xb3][0xd5][0x87][0xb2]r[0xf9]o[0xda]2@[0xcc][0xdb][0xe9][0xfb][0x9][0xc6][0xc8][0xb0]N[0xe0][0x1][0x8][0x98][0x9a][0xe1][0xf9]}[\r][0x83][0x97][0x12][0x9e][0xee][0xd2]TQ.[0x94]H[0x99][0x92])[0xd7][0xec][0xe7][0xd3]g[0xb3]J[0xb0]Y[0x14]X[0x98][0xd9],[0xc4]Dt[0x4]:N[0xcc][0x84][0x8f]MPb[0xf3]_2[0xdf][0xc9]1[0x1f][0xbb][0xc1]T[0xc5][0x16][0x8e][0x8f]([0xb6]D[0xc3][\n]"
+733359 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << "[0xde][0x1c][0xca]j{[0xd7][0xc1][0xfd][0xb0][0xb7]f[0xac][0xf6]So[0xba]n[0x1f][\n]"
+733359 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << "[0xd9]W[0xae]6s[0xe7]Q[0x99][0xcd][0xb][0xe9]?[0x1e][0x90]@[0xbe]fp[0xc8][0x94][0xb6]a[0x1a][0xe8]2\W[0xe5]KW[0xd4][0x6]{[0x9c][0xb][0xb3][0xfa]h[0xa5][0xe9][0xd9]([0x8c]/[0xe2][0xd1][0x1d][0x87][0xc9]O{;[0xcc]x[0x9][0xc2][0xc5][0x8]L[0xf6]p![0xbe][0x98][0xd8]El[0xbc]o[0xfd]\[0xb9][0x17][0x9b][0xfe][0xfa][0xf5][0x1b][0xfd][0x9c]EZX[0x7][0x0][0x0][\r][\n]"
+733359 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << "0[\r][\n]"
+733359 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << "[\r][\n]"
+733360 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << HTTP/1.1 200 OK
+733360 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << Server: Tengine/2.3.0
+733360 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << Date: Sat, 21 Mar 2020 14:22:02 GMT
+733360 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << Content-Type: application/json; charset=utf-8
+733360 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << Transfer-Encoding: chunked
+733360 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << Connection: keep-alive
+733360 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << Vary: Accept-Encoding
+733360 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << X-Powered-By: PHP/7.2.1
+733360 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << Set-Cookie: _T_WM=59372866455; expires=Tue, 31-Mar-2020 14:22:02 GMT; Max-Age=864000; path=/; domain=.weibo.cn
+733360 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << Set-Cookie: XSRF-TOKEN=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/; domain=.weibo.cn
+733360 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << Set-Cookie: XSRF-TOKEN=460e74; expires=Sat, 21-Mar-2020 14:42:02 GMT; Max-Age=1200; path=/; domain=m.weibo.cn
+733360 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << Set-Cookie: WEIBOCN_FROM=1110006030; path=/; domain=.weibo.cn; HttpOnly
+733360 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << Set-Cookie: MLOGIN=0; expires=Sat, 21-Mar-2020 15:22:02 GMT; Max-Age=3600; path=/; domain=.weibo.cn
+733360 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << X-Log-Uid: 
+733360 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << Content-Security-Policy: upgrade-insecure-requests
+733360 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << PROC_NODE: mweibo-10-13-112-214.bx.intra.weibo.cn
+733360 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << Content-Encoding: gzip
+733360 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << SSL_NODE: ssl-007.mweibo.dbl.intra.weibo.cn
+733360 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << LB: 39.156.6.59
+733360 DEBUG [2020-03-21 22:22:01]  http-outgoing-64 << Cache-Control: no-cache
+733360 DEBUG [2020-03-21 22:22:01]  Connection can be kept alive indefinitely
+733360 DEBUG [2020-03-21 22:22:01]  Cookie accepted [_T_WM="59372866455", version:0, domain:weibo.cn, path:/, expiry:Tue Mar 31 22:22:02 CST 2020]
+733360 DEBUG [2020-03-21 22:22:01]  Cookie accepted [XSRF-TOKEN="deleted", version:0, domain:weibo.cn, path:/, expiry:Thu Jan 01 08:00:01 CST 1970]
+733360 DEBUG [2020-03-21 22:22:01]  Cookie accepted [XSRF-TOKEN="460e74", version:0, domain:m.weibo.cn, path:/, expiry:Sat Mar 21 22:42:02 CST 2020]
+733361 DEBUG [2020-03-21 22:22:01]  Cookie accepted [WEIBOCN_FROM="1110006030", version:0, domain:weibo.cn, path:/, expiry:null]
+733361 DEBUG [2020-03-21 22:22:01]  Cookie accepted [MLOGIN="0", version:0, domain:weibo.cn, path:/, expiry:Sat Mar 21 23:22:02 CST 2020]
+733361 DEBUG [2020-03-21 22:22:01]  Connection [id: 64][route: {s}->https://m.weibo.cn:443] can be kept alive indefinitely
+733361 DEBUG [2020-03-21 22:22:01]  Connection released: [id: 64][route: {s}->https://m.weibo.cn:443][total kept alive: 2; route allocated: 1 of 2; total allocated: 2 of 20]
+733361 DEBUG [2020-03-21 22:22:01]  Connection manager is shutting down
+733361 DEBUG [2020-03-21 22:22:01]  http-outgoing-64: Close connection
+733361 DEBUG [2020-03-21 22:22:01]  http-outgoing-63: Close connection
+733361 DEBUG [2020-03-21 22:22:01]  Connection manager shut down
+733363 DEBUG [2020-03-21 22:22:01]  CookieSpec selected: default
+733363 DEBUG [2020-03-21 22:22:01]  Auth cache not set in the context
+733363 DEBUG [2020-03-21 22:22:01]  Connection request: [route: {}->http://m.weibo.cn:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+733363 DEBUG [2020-03-21 22:22:01]  Connection leased: [id: 65][route: {}->http://m.weibo.cn:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+733363 DEBUG [2020-03-21 22:22:01]  Opening connection {}->http://m.weibo.cn:80
+733363 DEBUG [2020-03-21 22:22:01]  Connecting to m.weibo.cn/39.156.6.59:80
+733491 DEBUG [2020-03-21 22:22:01]  Connection established 192.168.0.100:38069<->39.156.6.59:80
+733491 DEBUG [2020-03-21 22:22:01]  Executing request GET /statuses/extend?id=4481017693792741 HTTP/1.1
+733491 DEBUG [2020-03-21 22:22:01]  Target auth state: UNCHALLENGED
+733491 DEBUG [2020-03-21 22:22:01]  Proxy auth state: UNCHALLENGED
+733491 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 >> GET /statuses/extend?id=4481017693792741 HTTP/1.1
+733491 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 >> User-Agent: Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)
+733491 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 >> Host: m.weibo.cn
+733491 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 >> Connection: Keep-Alive
+733491 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 >> Accept-Encoding: gzip,deflate
+733491 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 >> "GET /statuses/extend?id=4481017693792741 HTTP/1.1[\r][\n]"
+733491 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 >> "User-Agent: Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)[\r][\n]"
+733491 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 >> "Host: m.weibo.cn[\r][\n]"
+733491 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 >> "Connection: Keep-Alive[\r][\n]"
+733491 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+733491 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 >> "[\r][\n]"
+733583 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 << "HTTP/1.1 302 Moved Temporarily[\r][\n]"
+733583 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 << "Server: Tengine/2.3.0[\r][\n]"
+733583 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 << "Date: Sat, 21 Mar 2020 14:22:03 GMT[\r][\n]"
+733583 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 << "Content-Type: text/html[\r][\n]"
+733583 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 << "Content-Length: 221[\r][\n]"
+733583 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 << "Connection: keep-alive[\r][\n]"
+733583 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 << "Location: https://m.weibo.cn/statuses/extend?id=4481017693792741[\r][\n]"
+733583 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 << "SSL_NODE: ssl-012.mweibo.dbl.intra.weibo.cn[\r][\n]"
+733583 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 << "LB: 39.156.6.59[\r][\n]"
+733583 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 << "Cache-Control: no-cache[\r][\n]"
+733583 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 << "[\r][\n]"
+733583 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 << "<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">[\r][\n]"
+733583 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 << "<html>[\r][\n]"
+733583 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 << "<head><title>302 Found</title></head>[\r][\n]"
+733583 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 << "<body>[\r][\n]"
+733583 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 << "<center><h1>302 Found</h1></center>[\r][\n]"
+733583 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 << "<hr/>Powered by Tengine/2.3.0<hr><center>tengine</center>[\r][\n]"
+733583 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 << "</body>[\r][\n]"
+733583 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 << "</html>[\r][\n]"
+733583 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 << HTTP/1.1 302 Moved Temporarily
+733583 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 << Server: Tengine/2.3.0
+733583 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 << Date: Sat, 21 Mar 2020 14:22:03 GMT
+733583 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 << Content-Type: text/html
+733583 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 << Content-Length: 221
+733583 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 << Connection: keep-alive
+733583 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 << Location: https://m.weibo.cn/statuses/extend?id=4481017693792741
+733583 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 << SSL_NODE: ssl-012.mweibo.dbl.intra.weibo.cn
+733583 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 << LB: 39.156.6.59
+733583 DEBUG [2020-03-21 22:22:01]  http-outgoing-65 << Cache-Control: no-cache
+733583 DEBUG [2020-03-21 22:22:01]  Connection can be kept alive indefinitely
+733583 DEBUG [2020-03-21 22:22:01]  Redirect requested to location 'https://m.weibo.cn/statuses/extend?id=4481017693792741'
+733583 DEBUG [2020-03-21 22:22:01]  Resetting target auth state
+733583 DEBUG [2020-03-21 22:22:01]  Redirecting to 'https://m.weibo.cn/statuses/extend?id=4481017693792741' via {s}->https://m.weibo.cn:443
+733583 DEBUG [2020-03-21 22:22:01]  Connection [id: 65][route: {}->http://m.weibo.cn:80] can be kept alive indefinitely
+733583 DEBUG [2020-03-21 22:22:01]  Connection released: [id: 65][route: {}->http://m.weibo.cn:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+733583 DEBUG [2020-03-21 22:22:01]  CookieSpec selected: default
+733583 DEBUG [2020-03-21 22:22:01]  Auth cache not set in the context
+733583 DEBUG [2020-03-21 22:22:01]  Connection request: [route: {s}->https://m.weibo.cn:443][total kept alive: 1; route allocated: 0 of 2; total allocated: 1 of 20]
+733583 DEBUG [2020-03-21 22:22:01]  Connection leased: [id: 66][route: {s}->https://m.weibo.cn:443][total kept alive: 1; route allocated: 1 of 2; total allocated: 2 of 20]
+733583 DEBUG [2020-03-21 22:22:01]  Opening connection {s}->https://m.weibo.cn:443
+733583 DEBUG [2020-03-21 22:22:01]  Connecting to m.weibo.cn/39.156.6.59:443
+733583 DEBUG [2020-03-21 22:22:01]  Connecting socket to m.weibo.cn/39.156.6.59:443 with timeout 0
+733679 DEBUG [2020-03-21 22:22:01]  Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]
+733679 DEBUG [2020-03-21 22:22:01]  Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+733679 DEBUG [2020-03-21 22:22:01]  Starting handshake
+734041 INFO  [2020-03-21 22:22:01]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+734061 DEBUG [2020-03-21 22:22:01]  Secure session established
+734061 DEBUG [2020-03-21 22:22:01]   negotiated protocol: TLSv1.2
+734061 DEBUG [2020-03-21 22:22:01]   negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+734061 DEBUG [2020-03-21 22:22:01]   peer principal: CN=weibo.cn, OU="Sina.com Technology(China)Co.,ltd", O="Sina.com Technology(China)Co.,ltd", ST=Beijing, C=CN
+734061 DEBUG [2020-03-21 22:22:01]   peer alternative names: [weibo.cn, www.weibo.cn, company.admin.weibo.com, *.movie.weibo.com, *.edm.weibo.cn, *.qr.weibo.cn, *.music.weibo.com, *.krcom.cn, krcom.cn, *.weibo.cn, admin.event.weibo.com, *.music.sina.com.cn, *.sina.cn, *.sinaimg.cn, *.oasis.weibo.cn, *.api.weibo.cn, *.chengdu.weibo.cn, *.ting.weibo.com, *.weibo.com, *.forecast.sina.cn, *.photo.weibo.com, *.h5.weibo.cn, *.sina.com.cn, *.media.weibo.com, agent.star.weibo.com, *.sinajs.cn, *.star.weibo.com, company.verified.weibo.com]
+734061 DEBUG [2020-03-21 22:22:01]   issuer principal: CN=GeoTrust CN RSA CA G1, OU=www.digicert.com, O=DigiCert Inc, C=US
+734061 DEBUG [2020-03-21 22:22:01]  Connection established 192.168.0.100:38070<->39.156.6.59:443
+734061 DEBUG [2020-03-21 22:22:01]  Executing request GET /statuses/extend?id=4481017693792741 HTTP/1.1
+734061 DEBUG [2020-03-21 22:22:01]  Target auth state: UNCHALLENGED
+734061 DEBUG [2020-03-21 22:22:01]  Proxy auth state: UNCHALLENGED
+734061 DEBUG [2020-03-21 22:22:01]  http-outgoing-66 >> GET /statuses/extend?id=4481017693792741 HTTP/1.1
+734061 DEBUG [2020-03-21 22:22:01]  http-outgoing-66 >> User-Agent: Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)
+734061 DEBUG [2020-03-21 22:22:01]  http-outgoing-66 >> Host: m.weibo.cn
+734061 DEBUG [2020-03-21 22:22:01]  http-outgoing-66 >> Connection: Keep-Alive
+734061 DEBUG [2020-03-21 22:22:01]  http-outgoing-66 >> Accept-Encoding: gzip,deflate
+734061 DEBUG [2020-03-21 22:22:01]  http-outgoing-66 >> "GET /statuses/extend?id=4481017693792741 HTTP/1.1[\r][\n]"
+734061 DEBUG [2020-03-21 22:22:01]  http-outgoing-66 >> "User-Agent: Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)[\r][\n]"
+734061 DEBUG [2020-03-21 22:22:01]  http-outgoing-66 >> "Host: m.weibo.cn[\r][\n]"
+734061 DEBUG [2020-03-21 22:22:01]  http-outgoing-66 >> "Connection: Keep-Alive[\r][\n]"
+734061 DEBUG [2020-03-21 22:22:01]  http-outgoing-66 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+734061 DEBUG [2020-03-21 22:22:01]  http-outgoing-66 >> "[\r][\n]"
+734190 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << "HTTP/1.1 200 OK[\r][\n]"
+734190 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << "Server: Tengine/2.3.0[\r][\n]"
+734190 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << "Date: Sat, 21 Mar 2020 14:22:03 GMT[\r][\n]"
+734190 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << "Content-Type: application/json; charset=utf-8[\r][\n]"
+734190 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << "Transfer-Encoding: chunked[\r][\n]"
+734190 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << "Connection: keep-alive[\r][\n]"
+734190 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << "Vary: Accept-Encoding[\r][\n]"
+734190 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << "X-Powered-By: PHP/7.2.1[\r][\n]"
+734190 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << "Set-Cookie: _T_WM=77626325534; expires=Tue, 31-Mar-2020 14:22:03 GMT; Max-Age=864000; path=/; domain=.weibo.cn[\r][\n]"
+734190 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << "Set-Cookie: XSRF-TOKEN=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/; domain=.weibo.cn[\r][\n]"
+734190 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << "Set-Cookie: XSRF-TOKEN=88870a; expires=Sat, 21-Mar-2020 14:42:03 GMT; Max-Age=1200; path=/; domain=m.weibo.cn[\r][\n]"
+734190 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << "Set-Cookie: WEIBOCN_FROM=1110006030; path=/; domain=.weibo.cn; HttpOnly[\r][\n]"
+734190 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << "Set-Cookie: MLOGIN=0; expires=Sat, 21-Mar-2020 15:22:03 GMT; Max-Age=3600; path=/; domain=.weibo.cn[\r][\n]"
+734190 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << "X-Log-Uid: [\r][\n]"
+734190 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << "Content-Security-Policy: upgrade-insecure-requests[\r][\n]"
+734190 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << "PROC_NODE: mweibo-10-41-14-69.dbl.intra.weibo.cn[\r][\n]"
+734190 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << "Content-Encoding: gzip[\r][\n]"
+734190 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << "SSL_NODE: ssl-014.mweibo.dbl.intra.weibo.cn[\r][\n]"
+734190 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << "LB: 39.156.6.59[\r][\n]"
+734190 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << "Cache-Control: no-cache[\r][\n]"
+734190 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << "[\r][\n]"
+734190 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << "308[\r][\n]"
+734190 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << "[0x1f][0x8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x3][0x8d]T[0xcb]n[0xdb]0[0x10][0xfc][0x15]C[0x17]_[0x12][0x8b][0x14][0xc5][0x97][0x9b][0xa4]([0xfa][0x9][0xed][0xad],[0xc][0x8a]"#[0xa1][0xb2]dXT[0x93]6[0xe8][0xbf]w[0x97][0x8a][0x14]'m[0x81]^[0xe8][0xf5]z<[0x9c]}[0xc][0x9f][0xb2][0xe1][[0xb6][0xa7]WYm[0xa3][0xcd][0xf6]O[0xcb][0xd7]n[0xe8][0xef]?[0xfb][0xc7][0xf8]q[0xe8][0xa3][0xef]c[0xb6][0xcf][0xcc]Tz[0xa2][0xcc][0xc4]uQ[0xa5][0x18]N[0xce][0xac][0xc2][0x98][0xd9][0x94]!f[0x92][0xbe][\n]"
+734190 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << "f[0x12][0x85][0x96][0x10]s[0x8b][0x18]][0xe1]Yq[0xf8]U[0x95][0x15][0xe0]%[0xc3][0xbc],%d[0xb4][0xd6][0x5]bXi[0xa6][0x10]([0xf0][0x8][0x12][0x18][0xf2][0xd4][0x1a][0xf3][0x12]NU([0xc0][0x8][0xee]9[0xe4][0x85]*[0x11][0xe3][0x0][0xc9][0xb9]v7[0xe3][0xc9][0xf6][0x1b][0xd7][0xd9]q[0xbc]5[0xd9]t[0xee][0xae][7[0xf4]&[0xbb][0xbb]i[0x8f][0xf7][0x1b][0xdb][0xc5][0xdb]/[0x0][0xc][0x8e]}[0xdd][0x8c]g[0x7][0x10][0x93][0x9b][0xbc][0xe1][0xbb][0xb1][0xed]- v[0xae]7[0xf9][0xd1][0xe4][0xfe]8[0xc4][0xf4][0xc7]|>[0x87][0xd8][0xf8][0xf3]h[0xf2][0xee][0xf0][0xd8][0xf6][0xd7]B[0xd3]Bj[0xaa][0xb8][0xda][0x9d][0xfa]{[0x93]m[0xc6][0xf8][0xa3][0xf3]@[0xf6][0xd0][0xd6][0xb1][0xd9]S|[0xb7]i|{[0xdf][0xc4][0x14][0x3][0xc0][0xe4]w7&Gmwfb[0x84]R(IH[0xa2][0xd4]RG[0x8][0xc4]A\[0x9][0x1][0xa7]+[0xf5]Z[0x99][0x8]X7-[0xb1]O[0x9c][0x86][0x5])y[0x81][0x99][0x1a]{[0xaf][0xb8][0x85]<'<u][0x89][0xb5][0xf7][0x15]s[0xaf][0xbb][0xab][0x8a][0x8a][0xbe][0xed]1[0xb2]iB[0xe8][0xda]cY[0xa8]OoVu9CFH[0xf1]7[0x9d][0xaa][\n]"
+734190 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << "+[0xff]%~[0xe6]W[0x8a]K[0xbc][0x97][0xe3]l5[0xf3][0xb8];[0xb8]5\[0x6]<][0x89][\n]"
+734190 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << "k[0xec]L[0x19][0xb8][xT@[0x85][0xa2][0xaa]8[0xf6]-@[0xa5][0x9a][0xe3]-[0xcf]j[0x5][0xc6]3?g%jp[0x4][0xf9][0xb9]C[0x1e]_[0xd9][0xa4][0x96]&[0x1e][0xb2]T[\r]w![0x9b][0xa3]tQ.j[0x86][0x95][0x16][0x2]w[0xad]._[0xaa]`[\n]"
+734190 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << "[0xab](4[0x9e]A[0xcd][0xbb]/Wm[0xd4][0xa3][0xf2]: 's[0xa0]_[0x11][0xbc]}[0x9e][0x88][0xc][0x9c]&[0x9d]v[0x9d],[0xac]+[0xc4][0x16]}[0xf3][0xbf][0xdb][0xbd]t[0xbb] [0xd4]-[0xf8]?[0xe7][0xf5][0xbc]K[0x5]V4[0xbb][0x87];V[0xa3]*[0x8f]=![0x1]c[0xc9][0xc8][0xeb]{[0x5][0xc3][0x9e][0x94]!UG%[0x9b]m[0xb2][0xc4][0xb2]`[0xf4][0xe2][0xf6][0xfa][0xa6]:[0xa7][0xa5][0xb6][0x1b]|([0xae][0xc1]h[0xb0][0xfe]M[0x8c][0xa7]=[0x1a]*&[0x1f]}[0x10]?[0xe5][0xc3][0xa7][0xf1][0x8][0xfb][0xdf][0x9c]}x[0x6][0x8c][0x9][0xf1][0xbd][0xad][0xfd][0xb0]{[0xf0]m5[0xec][0xdc][0x0][0x8e][0x1b][0x9b][0xe1][0xe1]}h[0xeb][JX[0xb9]/KE[0xb8]V[0x82]PU[0x8]F9P[0xa4]{[0x1a][0xf8][0x1b][0x9a][0x16][0xfc]|a[0xf4][0xed][0xe2][0xf3][0xed]l[0xf3][0xd9][0x8e][0xdb][0xd9][0x8d][0x1b]z[0x6][0xf]>[0xdb]1}[0xd9]&[0xeb]o_[0xc4][0xbc][0xf1][0xff]t[0xea][0x6][[0x9b][0x1c][0xea][0xe4]&'[0x1a]"[0xf8]dPV{[0xf4]][0xdb][0xfb][0x83][0xb3][0xe7][0xfa]0[0x1e]m[0xd7][0x1d]R![0x87][0xda][0x7];u[0x11][0x9f][0x83][0xed][0xea][0xf4][0xd7]o[0xd1][0x88]"#<[0xa1] [0x1e][0xba][0xad][0xd1][0xad][0xb0]?[0x1a][0xf7]0M[0xc4]'[0x1f][0x15]v[0x9d];[0xf]6[0xf9][0x2][0x91]J;[0xdc]v[0xa5][0xe9][0xca]nr{[0x97]]eg[0x1a][0xc6]8[0x1e][0xdc]0[0xe1][0xbb]L[0xae]2[0xe8][0xe7][0x11][0xde][0xe8][0xcb][0x94][0x8d][0xb1][0x8d]S[0xed][0xd7][0x1c][0x15][0xbf]~[0xfd][0x6][0xb1]Z-[0xcd][0xec][0x5][0x0][0x0][\r][\n]"
+734192 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << "0[\r][\n]"
+734192 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << "[\r][\n]"
+734192 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << HTTP/1.1 200 OK
+734192 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << Server: Tengine/2.3.0
+734192 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << Date: Sat, 21 Mar 2020 14:22:03 GMT
+734192 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << Content-Type: application/json; charset=utf-8
+734192 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << Transfer-Encoding: chunked
+734192 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << Connection: keep-alive
+734192 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << Vary: Accept-Encoding
+734192 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << X-Powered-By: PHP/7.2.1
+734192 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << Set-Cookie: _T_WM=77626325534; expires=Tue, 31-Mar-2020 14:22:03 GMT; Max-Age=864000; path=/; domain=.weibo.cn
+734192 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << Set-Cookie: XSRF-TOKEN=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/; domain=.weibo.cn
+734192 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << Set-Cookie: XSRF-TOKEN=88870a; expires=Sat, 21-Mar-2020 14:42:03 GMT; Max-Age=1200; path=/; domain=m.weibo.cn
+734192 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << Set-Cookie: WEIBOCN_FROM=1110006030; path=/; domain=.weibo.cn; HttpOnly
+734192 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << Set-Cookie: MLOGIN=0; expires=Sat, 21-Mar-2020 15:22:03 GMT; Max-Age=3600; path=/; domain=.weibo.cn
+734192 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << X-Log-Uid: 
+734192 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << Content-Security-Policy: upgrade-insecure-requests
+734192 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << PROC_NODE: mweibo-10-41-14-69.dbl.intra.weibo.cn
+734192 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << Content-Encoding: gzip
+734192 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << SSL_NODE: ssl-014.mweibo.dbl.intra.weibo.cn
+734192 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << LB: 39.156.6.59
+734192 DEBUG [2020-03-21 22:22:02]  http-outgoing-66 << Cache-Control: no-cache
+734192 DEBUG [2020-03-21 22:22:02]  Connection can be kept alive indefinitely
+734193 DEBUG [2020-03-21 22:22:02]  Cookie accepted [_T_WM="77626325534", version:0, domain:weibo.cn, path:/, expiry:Tue Mar 31 22:22:03 CST 2020]
+734193 DEBUG [2020-03-21 22:22:02]  Cookie accepted [XSRF-TOKEN="deleted", version:0, domain:weibo.cn, path:/, expiry:Thu Jan 01 08:00:01 CST 1970]
+734193 DEBUG [2020-03-21 22:22:02]  Cookie accepted [XSRF-TOKEN="88870a", version:0, domain:m.weibo.cn, path:/, expiry:Sat Mar 21 22:42:03 CST 2020]
+734193 DEBUG [2020-03-21 22:22:02]  Cookie accepted [WEIBOCN_FROM="1110006030", version:0, domain:weibo.cn, path:/, expiry:null]
+734193 DEBUG [2020-03-21 22:22:02]  Cookie accepted [MLOGIN="0", version:0, domain:weibo.cn, path:/, expiry:Sat Mar 21 23:22:03 CST 2020]
+734193 DEBUG [2020-03-21 22:22:02]  Connection [id: 66][route: {s}->https://m.weibo.cn:443] can be kept alive indefinitely
+734193 DEBUG [2020-03-21 22:22:02]  Connection released: [id: 66][route: {s}->https://m.weibo.cn:443][total kept alive: 2; route allocated: 1 of 2; total allocated: 2 of 20]
+734193 DEBUG [2020-03-21 22:22:02]  Connection manager is shutting down
+734193 DEBUG [2020-03-21 22:22:02]  http-outgoing-66: Close connection
+734194 DEBUG [2020-03-21 22:22:02]  http-outgoing-65: Close connection
+734194 DEBUG [2020-03-21 22:22:02]  Connection manager shut down
+735041 INFO  [2020-03-21 22:22:02]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+736042 INFO  [2020-03-21 22:22:03]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+737042 INFO  [2020-03-21 22:22:04]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+737194 INFO  [2020-03-21 22:22:05]  done: https://m.weibo.cn/api/container/getIndex?type=uid&value=6796129590&containerid=1076036796129590&page=2
+738042 INFO  [2020-03-21 22:22:05]  -activeThreads=0, spinWaiting=0, fetchQueue.size=0
+738042 INFO  [2020-03-21 22:22:05]  clear all activeThread
+738043 INFO  [2020-03-21 22:22:05]  close generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
+738043 INFO  [2020-03-21 22:22:05]  close segmentwriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
+738043 INFO  [2020-03-21 22:22:05]  depth 1 finish: 
+	total urls:	2
+	total time:	24 seconds
+738043 INFO  [2020-03-21 22:22:05]  start depth 2
+738043 INFO  [2020-03-21 22:22:05]  start merge
+738043 INFO  [2020-03-21 22:22:05]  merge fetch database
+738046 INFO  [2020-03-21 22:22:05]  merge link database
+738046 INFO  [2020-03-21 22:22:05]  end merge
+738074 DEBUG [2020-03-21 22:22:05]  remove fetch database
+738091 DEBUG [2020-03-21 22:22:05]  remove link database
+738091 INFO  [2020-03-21 22:22:05]  open generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
+738091 INFO  [2020-03-21 22:22:05]  init segmentWriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
+739093 INFO  [2020-03-21 22:22:06]  -activeThreads=0, spinWaiting=0, fetchQueue.size=0
+739093 INFO  [2020-03-21 22:22:06]  clear all activeThread
+739093 INFO  [2020-03-21 22:22:06]  close generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
+739093 INFO  [2020-03-21 22:22:06]  close segmentwriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
+739093 INFO  [2020-03-21 22:22:06]  depth 2 finish: 
 	total urls:	0
 	total time:	1 seconds
-15331 INFO  [2020-03-21 01:15:41]  start depth 1
-15331 INFO  [2020-03-21 01:15:41]  start merge
-15332 INFO  [2020-03-21 01:15:41]  merge fetch database
-15333 INFO  [2020-03-21 01:15:41]  merge link database
-15333 INFO  [2020-03-21 01:15:41]  end merge
-15354 DEBUG [2020-03-21 01:15:41]  remove fetch database
-15371 DEBUG [2020-03-21 01:15:41]  remove link database
-15371 INFO  [2020-03-21 01:15:41]  open generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
-15372 INFO  [2020-03-21 01:15:41]  init segmentWriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
-16373 INFO  [2020-03-21 01:15:42]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
-16373 INFO  [2020-03-21 01:15:42]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
-17373 INFO  [2020-03-21 01:15:43]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
-17373 INFO  [2020-03-21 01:15:43]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
-18373 INFO  [2020-03-21 01:15:44]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
-18373 INFO  [2020-03-21 01:15:44]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
-19374 INFO  [2020-03-21 01:15:45]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
-19374 INFO  [2020-03-21 01:15:45]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
-20374 INFO  [2020-03-21 01:15:46]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
-20374 INFO  [2020-03-21 01:15:46]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
-21374 INFO  [2020-03-21 01:15:47]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
-21374 INFO  [2020-03-21 01:15:47]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
-22375 INFO  [2020-03-21 01:15:48]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
-22375 INFO  [2020-03-21 01:15:48]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
-23375 INFO  [2020-03-21 01:15:49]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
-23375 INFO  [2020-03-21 01:15:49]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
-24376 INFO  [2020-03-21 01:15:50]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
-24376 INFO  [2020-03-21 01:15:50]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
-25377 INFO  [2020-03-21 01:15:51]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
-25377 INFO  [2020-03-21 01:15:51]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
-26377 INFO  [2020-03-21 01:15:52]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
-26377 INFO  [2020-03-21 01:15:52]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
-27377 INFO  [2020-03-21 01:15:53]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
-27377 INFO  [2020-03-21 01:15:53]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
-28378 INFO  [2020-03-21 01:15:54]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
-28378 INFO  [2020-03-21 01:15:54]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
-29378 INFO  [2020-03-21 01:15:55]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
-29378 INFO  [2020-03-21 01:15:55]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
-30379 INFO  [2020-03-21 01:15:56]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
-30379 INFO  [2020-03-21 01:15:56]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
-31380 INFO  [2020-03-21 01:15:57]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
-31380 INFO  [2020-03-21 01:15:57]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
-32381 INFO  [2020-03-21 01:15:58]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
-32381 INFO  [2020-03-21 01:15:58]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
-33382 INFO  [2020-03-21 01:15:59]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
-33382 INFO  [2020-03-21 01:15:59]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
-34383 INFO  [2020-03-21 01:16:00]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
-34383 INFO  [2020-03-21 01:16:00]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
-35383 INFO  [2020-03-21 01:16:01]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
-35383 INFO  [2020-03-21 01:16:01]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
-36384 INFO  [2020-03-21 01:16:02]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
-36384 INFO  [2020-03-21 01:16:02]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
-37385 INFO  [2020-03-21 01:16:03]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
-37385 INFO  [2020-03-21 01:16:03]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
-38385 INFO  [2020-03-21 01:16:04]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
-38385 INFO  [2020-03-21 01:16:04]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
-39385 INFO  [2020-03-21 01:16:05]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
-39385 INFO  [2020-03-21 01:16:05]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
-40385 INFO  [2020-03-21 01:16:06]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
-40385 INFO  [2020-03-21 01:16:06]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=2
-41170 INFO  [2020-03-21 01:16:06]  failed: https://m.weibo.cn/api/container/getIndex?type=uid&value=2630028693&containerid=1076032630028693&page=1
-com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 12 path $
-	at com.google.gson.JsonParser.parse(JsonParser.java:65)
-	at com.google.gson.JsonParser.parse(JsonParser.java:45)
-	at com.qyt.CollectorWeiBo.getFullTextById(CollectorWeiBo.java:426)
-	at com.qyt.CollectorWeiBo.replaceFullContrnt(CollectorWeiBo.java:392)
-	at com.qyt.CollectorWeiBo.paeseByJson(CollectorWeiBo.java:345)
-	at com.qyt.CollectorWeiBo.visit(CollectorWeiBo.java:175)
-	at cn.edu.hfut.dmic.webcollector.crawler.AutoParseCrawler.execute(AutoParseCrawler.java:73)
-	at cn.edu.hfut.dmic.webcollector.fetcher.Fetcher$FetcherThread.run(Fetcher.java:228)
-Caused by: com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 12 path $
-	at com.google.gson.stream.JsonReader.syntaxError(JsonReader.java:1568)
-	at com.google.gson.stream.JsonReader.checkLenient(JsonReader.java:1409)
-	at com.google.gson.stream.JsonReader.doPeek(JsonReader.java:542)
-	at com.google.gson.stream.JsonReader.peek(JsonReader.java:425)
-	at com.google.gson.JsonParser.parse(JsonParser.java:60)
-	... 7 more
-41386 INFO  [2020-03-21 01:16:07]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
-42386 INFO  [2020-03-21 01:16:08]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
-43386 INFO  [2020-03-21 01:16:09]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+770911 INFO  [2020-03-21 22:22:38]  start depth 1
+770911 INFO  [2020-03-21 22:22:38]  start merge
+770911 INFO  [2020-03-21 22:22:38]  merge fetch database
+770911 INFO  [2020-03-21 22:22:38]  merge link database
+770912 INFO  [2020-03-21 22:22:38]  end merge
+770926 DEBUG [2020-03-21 22:22:38]  remove fetch database
+770944 DEBUG [2020-03-21 22:22:38]  remove link database
+770944 INFO  [2020-03-21 22:22:38]  open generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
+770944 INFO  [2020-03-21 22:22:38]  init segmentWriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
+771945 INFO  [2020-03-21 22:22:39]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+772945 INFO  [2020-03-21 22:22:40]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+773946 INFO  [2020-03-21 22:22:41]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+774947 INFO  [2020-03-21 22:22:42]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+775947 INFO  [2020-03-21 22:22:43]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+776947 INFO  [2020-03-21 22:22:44]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+777948 INFO  [2020-03-21 22:22:45]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+778948 INFO  [2020-03-21 22:22:46]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+779567 INFO  [2020-03-21 22:22:47]  done: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_followers_-_6796129590
+779948 INFO  [2020-03-21 22:22:47]  -activeThreads=0, spinWaiting=0, fetchQueue.size=0
+779948 INFO  [2020-03-21 22:22:47]  clear all activeThread
+779948 INFO  [2020-03-21 22:22:47]  close generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
+779948 INFO  [2020-03-21 22:22:47]  close segmentwriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
+779948 INFO  [2020-03-21 22:22:47]  depth 1 finish: 
+	total urls:	1
+	total time:	9 seconds
+779948 INFO  [2020-03-21 22:22:47]  start depth 2
+779948 INFO  [2020-03-21 22:22:47]  start merge
+779948 INFO  [2020-03-21 22:22:47]  merge fetch database
+779949 INFO  [2020-03-21 22:22:47]  merge link database
+779949 INFO  [2020-03-21 22:22:47]  end merge
+779970 DEBUG [2020-03-21 22:22:47]  remove fetch database
+779988 DEBUG [2020-03-21 22:22:47]  remove link database
+779988 INFO  [2020-03-21 22:22:47]  open generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
+779988 INFO  [2020-03-21 22:22:47]  init segmentWriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
+780988 INFO  [2020-03-21 22:22:48]  -activeThreads=0, spinWaiting=0, fetchQueue.size=0
+780988 INFO  [2020-03-21 22:22:48]  clear all activeThread
+780988 INFO  [2020-03-21 22:22:48]  close generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
+780988 INFO  [2020-03-21 22:22:48]  close segmentwriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
+780988 INFO  [2020-03-21 22:22:48]  depth 2 finish: 
+	total urls:	0
+	total time:	1 seconds
+781548 INFO  [2020-03-21 22:22:49]  start depth 1
+781548 INFO  [2020-03-21 22:22:49]  start merge
+781548 INFO  [2020-03-21 22:22:49]  merge fetch database
+781548 INFO  [2020-03-21 22:22:49]  merge link database
+781548 INFO  [2020-03-21 22:22:49]  end merge
+781562 DEBUG [2020-03-21 22:22:49]  remove fetch database
+781591 DEBUG [2020-03-21 22:22:49]  remove link database
+781591 INFO  [2020-03-21 22:22:49]  open generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
+781591 INFO  [2020-03-21 22:22:49]  init segmentWriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
+782591 INFO  [2020-03-21 22:22:50]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+782591 INFO  [2020-03-21 22:22:50]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=1640016932&containerid=1076031640016932&page=2
+783592 INFO  [2020-03-21 22:22:51]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+783592 INFO  [2020-03-21 22:22:51]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=1640016932&containerid=1076031640016932&page=2
+784592 INFO  [2020-03-21 22:22:52]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+784592 INFO  [2020-03-21 22:22:52]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=1640016932&containerid=1076031640016932&page=2
+785486 INFO  [2020-03-21 22:22:53]  done: https://m.weibo.cn/api/container/getIndex?type=uid&value=1640016932&containerid=1076031640016932&page=1
+785592 INFO  [2020-03-21 22:22:53]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+786593 INFO  [2020-03-21 22:22:54]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+787593 INFO  [2020-03-21 22:22:55]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+788593 INFO  [2020-03-21 22:22:56]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+788955 INFO  [2020-03-21 22:22:56]  done: https://m.weibo.cn/api/container/getIndex?type=uid&value=1640016932&containerid=1076031640016932&page=2
+789593 INFO  [2020-03-21 22:22:57]  -activeThreads=0, spinWaiting=0, fetchQueue.size=0
+789593 INFO  [2020-03-21 22:22:57]  clear all activeThread
+789593 INFO  [2020-03-21 22:22:57]  close generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
+789594 INFO  [2020-03-21 22:22:57]  close segmentwriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
+789594 INFO  [2020-03-21 22:22:57]  depth 1 finish: 
+	total urls:	2
+	total time:	8 seconds
+789594 INFO  [2020-03-21 22:22:57]  start depth 2
+789594 INFO  [2020-03-21 22:22:57]  start merge
+789594 INFO  [2020-03-21 22:22:57]  merge fetch database
+789596 INFO  [2020-03-21 22:22:57]  merge link database
+789596 INFO  [2020-03-21 22:22:57]  end merge
+789956 DEBUG [2020-03-21 22:22:57]  remove fetch database
+789974 DEBUG [2020-03-21 22:22:57]  remove link database
+789974 INFO  [2020-03-21 22:22:57]  open generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
+789974 INFO  [2020-03-21 22:22:57]  init segmentWriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
+790975 INFO  [2020-03-21 22:22:58]  -activeThreads=0, spinWaiting=0, fetchQueue.size=0
+790975 INFO  [2020-03-21 22:22:58]  clear all activeThread
+790976 INFO  [2020-03-21 22:22:58]  close generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
+790976 INFO  [2020-03-21 22:22:58]  close segmentwriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
+790976 INFO  [2020-03-21 22:22:58]  depth 2 finish: 
+	total urls:	0
+	total time:	1 seconds
+805740 INFO  [2020-03-21 22:23:13]  start depth 1
+805740 INFO  [2020-03-21 22:23:13]  start merge
+805740 INFO  [2020-03-21 22:23:13]  merge fetch database
+805740 INFO  [2020-03-21 22:23:13]  merge link database
+805740 INFO  [2020-03-21 22:23:13]  end merge
+805794 DEBUG [2020-03-21 22:23:13]  remove fetch database
+805812 DEBUG [2020-03-21 22:23:13]  remove link database
+805812 INFO  [2020-03-21 22:23:13]  open generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
+805812 INFO  [2020-03-21 22:23:13]  init segmentWriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
+806812 INFO  [2020-03-21 22:23:14]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+807813 INFO  [2020-03-21 22:23:15]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+808813 INFO  [2020-03-21 22:23:16]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+809813 INFO  [2020-03-21 22:23:17]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+810814 INFO  [2020-03-21 22:23:18]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+811814 INFO  [2020-03-21 22:23:19]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+812815 INFO  [2020-03-21 22:23:20]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+813815 INFO  [2020-03-21 22:23:21]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+814034 INFO  [2020-03-21 22:23:21]  done: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_followers_-_1640016932
+814816 INFO  [2020-03-21 22:23:22]  -activeThreads=0, spinWaiting=0, fetchQueue.size=0
+814816 INFO  [2020-03-21 22:23:22]  clear all activeThread
+814817 INFO  [2020-03-21 22:23:22]  close generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
+814817 INFO  [2020-03-21 22:23:22]  close segmentwriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
+814817 INFO  [2020-03-21 22:23:22]  depth 1 finish: 
+	total urls:	1
+	total time:	9 seconds
+814817 INFO  [2020-03-21 22:23:22]  start depth 2
+814817 INFO  [2020-03-21 22:23:22]  start merge
+814817 INFO  [2020-03-21 22:23:22]  merge fetch database
+814818 INFO  [2020-03-21 22:23:22]  merge link database
+814819 INFO  [2020-03-21 22:23:22]  end merge
+815760 DEBUG [2020-03-21 22:23:23]  remove fetch database
+815777 DEBUG [2020-03-21 22:23:23]  remove link database
+815777 INFO  [2020-03-21 22:23:23]  open generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
+815777 INFO  [2020-03-21 22:23:23]  init segmentWriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
+816778 INFO  [2020-03-21 22:23:24]  -activeThreads=0, spinWaiting=0, fetchQueue.size=0
+816778 INFO  [2020-03-21 22:23:24]  clear all activeThread
+816779 INFO  [2020-03-21 22:23:24]  close generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
+816779 INFO  [2020-03-21 22:23:24]  close segmentwriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
+816779 INFO  [2020-03-21 22:23:24]  depth 2 finish: 
+	total urls:	0
+	total time:	1 seconds
+822064 INFO  [2020-03-21 22:23:29]  start depth 1
+822064 INFO  [2020-03-21 22:23:29]  start merge
+822064 INFO  [2020-03-21 22:23:29]  merge fetch database
+822064 INFO  [2020-03-21 22:23:29]  merge link database
+822064 INFO  [2020-03-21 22:23:29]  end merge
+822079 DEBUG [2020-03-21 22:23:29]  remove fetch database
+822096 DEBUG [2020-03-21 22:23:29]  remove link database
+822096 INFO  [2020-03-21 22:23:29]  open generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
+822096 INFO  [2020-03-21 22:23:29]  init segmentWriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
+823097 INFO  [2020-03-21 22:23:30]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+823097 INFO  [2020-03-21 22:23:30]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=3591355593&containerid=1076033591355593&page=2
+824097 INFO  [2020-03-21 22:23:31]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+824097 INFO  [2020-03-21 22:23:31]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=3591355593&containerid=1076033591355593&page=2
+825098 INFO  [2020-03-21 22:23:32]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+825098 INFO  [2020-03-21 22:23:32]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=3591355593&containerid=1076033591355593&page=2
+826098 INFO  [2020-03-21 22:23:33]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+826098 INFO  [2020-03-21 22:23:33]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=3591355593&containerid=1076033591355593&page=2
+827099 INFO  [2020-03-21 22:23:34]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+827099 INFO  [2020-03-21 22:23:34]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=3591355593&containerid=1076033591355593&page=2
+828099 INFO  [2020-03-21 22:23:35]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+828099 INFO  [2020-03-21 22:23:35]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=3591355593&containerid=1076033591355593&page=2
+829100 INFO  [2020-03-21 22:23:36]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+829100 INFO  [2020-03-21 22:23:36]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=3591355593&containerid=1076033591355593&page=2
+830100 INFO  [2020-03-21 22:23:37]  -activeThreads=1, spinWaiting=0, fetchQueue.size=1
+830100 INFO  [2020-03-21 22:23:37]    0. https://m.weibo.cn/api/container/getIndex?type=uid&value=3591355593&containerid=1076033591355593&page=2
+830265 INFO  [2020-03-21 22:23:38]  done: https://m.weibo.cn/api/container/getIndex?type=uid&value=3591355593&containerid=1076033591355593&page=1
+831100 INFO  [2020-03-21 22:23:38]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+832101 INFO  [2020-03-21 22:23:39]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+833101 INFO  [2020-03-21 22:23:40]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+834101 INFO  [2020-03-21 22:23:41]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+835103 INFO  [2020-03-21 22:23:42]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+835807 INFO  [2020-03-21 22:23:43]  done: https://m.weibo.cn/api/container/getIndex?type=uid&value=3591355593&containerid=1076033591355593&page=2
+836104 INFO  [2020-03-21 22:23:43]  -activeThreads=0, spinWaiting=0, fetchQueue.size=0
+836104 INFO  [2020-03-21 22:23:43]  clear all activeThread
+836104 INFO  [2020-03-21 22:23:43]  close generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
+836104 INFO  [2020-03-21 22:23:43]  close segmentwriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
+836104 INFO  [2020-03-21 22:23:43]  depth 1 finish: 
+	total urls:	2
+	total time:	14 seconds
+836104 INFO  [2020-03-21 22:23:43]  start depth 2
+836104 INFO  [2020-03-21 22:23:43]  start merge
+836104 INFO  [2020-03-21 22:23:43]  merge fetch database
+836105 INFO  [2020-03-21 22:23:43]  merge link database
+836105 INFO  [2020-03-21 22:23:43]  end merge
+836124 DEBUG [2020-03-21 22:23:43]  remove fetch database
+836142 DEBUG [2020-03-21 22:23:43]  remove link database
+836142 INFO  [2020-03-21 22:23:43]  open generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
+836142 INFO  [2020-03-21 22:23:43]  init segmentWriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
+837143 INFO  [2020-03-21 22:23:44]  -activeThreads=0, spinWaiting=0, fetchQueue.size=0
+837143 INFO  [2020-03-21 22:23:44]  clear all activeThread
+837144 INFO  [2020-03-21 22:23:44]  close generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
+837144 INFO  [2020-03-21 22:23:44]  close segmentwriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
+837144 INFO  [2020-03-21 22:23:44]  depth 2 finish: 
+	total urls:	0
+	total time:	1 seconds
+843763 INFO  [2020-03-21 22:23:51]  start depth 1
+843763 INFO  [2020-03-21 22:23:51]  start merge
+843763 INFO  [2020-03-21 22:23:51]  merge fetch database
+843763 INFO  [2020-03-21 22:23:51]  merge link database
+843763 INFO  [2020-03-21 22:23:51]  end merge
+843777 DEBUG [2020-03-21 22:23:51]  remove fetch database
+843795 DEBUG [2020-03-21 22:23:51]  remove link database
+843795 INFO  [2020-03-21 22:23:51]  open generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
+843796 INFO  [2020-03-21 22:23:51]  init segmentWriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
+844796 INFO  [2020-03-21 22:23:52]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+845797 INFO  [2020-03-21 22:23:53]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+846797 INFO  [2020-03-21 22:23:54]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+847797 INFO  [2020-03-21 22:23:55]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+848798 INFO  [2020-03-21 22:23:56]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+849800 INFO  [2020-03-21 22:23:57]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+850801 INFO  [2020-03-21 22:23:58]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+851801 INFO  [2020-03-21 22:23:59]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+852801 INFO  [2020-03-21 22:24:00]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+853801 INFO  [2020-03-21 22:24:01]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+854802 INFO  [2020-03-21 22:24:02]  -activeThreads=1, spinWaiting=0, fetchQueue.size=0
+855053 INFO  [2020-03-21 22:24:02]  done: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_followers_-_3591355593
+855802 INFO  [2020-03-21 22:24:03]  -activeThreads=0, spinWaiting=0, fetchQueue.size=0
+855802 INFO  [2020-03-21 22:24:03]  clear all activeThread
+855802 INFO  [2020-03-21 22:24:03]  close generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
+855802 INFO  [2020-03-21 22:24:03]  close segmentwriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
+855802 INFO  [2020-03-21 22:24:03]  depth 1 finish: 
+	total urls:	1
+	total time:	12 seconds
+855802 INFO  [2020-03-21 22:24:03]  start depth 2
+855802 INFO  [2020-03-21 22:24:03]  start merge
+855802 INFO  [2020-03-21 22:24:03]  merge fetch database
+855803 INFO  [2020-03-21 22:24:03]  merge link database
+855803 INFO  [2020-03-21 22:24:03]  end merge
+855859 DEBUG [2020-03-21 22:24:03]  remove fetch database
+855876 DEBUG [2020-03-21 22:24:03]  remove link database
+855876 INFO  [2020-03-21 22:24:03]  open generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
+855876 INFO  [2020-03-21 22:24:03]  init segmentWriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
+856876 INFO  [2020-03-21 22:24:04]  -activeThreads=0, spinWaiting=0, fetchQueue.size=0
+856876 INFO  [2020-03-21 22:24:04]  clear all activeThread
+856876 INFO  [2020-03-21 22:24:04]  close generator:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyGenerator
+856876 INFO  [2020-03-21 22:24:04]  close segmentwriter:cn.edu.hfut.dmic.webcollector.plugin.berkeley.BerkeleyDBManager
+856876 INFO  [2020-03-21 22:24:04]  depth 2 finish: 
+	total urls:	0
+	total time:	1 seconds

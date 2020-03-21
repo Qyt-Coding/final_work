@@ -1,9 +1,12 @@
 package com.qyt.k_means;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 import com.DB.DBhanderqyt;
 import com.DB.Globalqyt;
+
+import DataMining.Doc;
 
 public class testMain {
 
@@ -31,7 +34,11 @@ public class testMain {
 	        System.out.println("单次迭代运行次数："+kRun.getIterTimes());
 	        for (Cluster cluster : clusterSet) {
 	        	System.out.println("++++"+cluster.getId());
-	            System.out.println(cluster);
+	        	 List<Point>pointList=cluster.getMembers();
+	        	 for(Point p:pointList) {
+	        		 Doc doc=Globalqyt.dBer.getDocById(p.getId());
+	        		 System.out.println("文档Id：   "+doc.getDocID()+"  文档内容 ："+doc.getDocCon());
+	        	 }
 	        }
 	    }
 }
