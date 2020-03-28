@@ -133,6 +133,9 @@ public class DBHander {
 		}
 		return true;
 	}
+	/**
+	 * 把文档进行向量化
+	 */
 	public docVector buildDocVector(int docID){
 		String cmdString = "select * from postingitem where docID="+ docID+";";
 		ResultSet resultSet = null;

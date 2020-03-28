@@ -62,7 +62,7 @@ public class People {
 			List<User> users=crawler.getWeiboList();
 			for (User u : users) {
 				int flag = 0;
-				for (String t : Global.usedIDList) {
+				for (String t : Global.usedIDList) {//去掉重复的Id
 					if (t.equals(u.getId())) {
 						flag = 1;
 					}

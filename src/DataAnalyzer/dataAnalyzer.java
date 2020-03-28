@@ -7,8 +7,8 @@ public class dataAnalyzer {
 		zplKMeans kMeans;
 		//把
 		kMeans = new zplKMeans(20);
-		kMeans.readVectorSet();
-		kMeans.initRandom();
+		kMeans.readVectorSet();//主要是把文档进行向量化
+		kMeans.initRandom();//list cluster len:1
 		kMeans.start();
 		kMeans.showAll();
 		Global.dBer.closeDB();

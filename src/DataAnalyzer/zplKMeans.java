@@ -14,8 +14,8 @@ import jxl.write.biff.RowsExceededException;
 public class zplKMeans {
 	private int docNum;
 	private int _k;
-	private int[] _result;
-	private zplCluster[] _clusterSet;
+	private int[] _result;//结果集
+	private zplCluster[] _clusterSet;//集群
 	// 原始数据
 	private TermVector _vectorSet;
 
@@ -34,7 +34,7 @@ public class zplKMeans {
 	}
 
 	public boolean readVectorSet() {
-		_vectorSet = Global.dBer.buildTermVector();
+		_vectorSet = Global.dBer.buildTermVector();//对每个文档进行向量化
 		if (_vectorSet == null)
 			return false;
 		docNum = Global.docNum;
@@ -48,7 +48,7 @@ public class zplKMeans {
 			it++;
 			// 重新计算每个聚类的均值
 			for (int i = 0; i < _k; i++) {
-				_clusterSet[i].UpdateMean();
+				_clusterSet[i].UpdateMean();//重新的对聚类进行计算
 				System.out.println("mean:" + _clusterSet[i].getMean().computeLength());
 				if (_clusterSet[i].getMean().computeLength() == 0) {
 					System.out.println("id:" + i);
@@ -56,7 +56,7 @@ public class zplKMeans {
 				}
 			}
 
-			// 计算每个数据和每个聚类的距离
+			// 计算每个数据和每个聚类的距离//这里主要是重新的对每个数据的聚类重新安排
 			for (docVector set : _vectorSet.getList()) {
 				for (int j = 0; j < _k; j++) {
 					double dist = TermVector.getDist(set, _clusterSet[j].getMean());
@@ -128,7 +128,7 @@ public class zplKMeans {
 						count--;
 					} else {
 						_vectorSet.removeVector(vector);
-						System.out.println("IDnum:" + intRd + ";content:" + vector.getWeiboCon());
+						//System.out.println("IDnum:" + intRd + ";content:" + vector.getWeiboCon());
 					}
 				}
 

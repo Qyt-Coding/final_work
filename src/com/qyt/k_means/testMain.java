@@ -35,10 +35,13 @@ public class testMain {
 	        for (Cluster cluster : clusterSet) {
 	        	System.out.println("++++"+cluster.getId());
 	        	 List<Point>pointList=cluster.getMembers();
-	        	 for(Point p:pointList) {
-	        		 Doc doc=Globalqyt.dBer.getDocById(p.getId());
-	        		 System.out.println("文档Id：   "+doc.getDocID()+"  文档内容 ："+doc.getDocCon());
-	        	 }
+//	        	 for(Point p:pointList) {
+//	        		 Doc doc=Globalqyt.dBer.getDocById(p.getId());
+//	        		 System.out.println("文档Id：   "+doc.getDocID()+"  文档内容 ："+doc.getDocCon());
+//	        	 }
+	        	 Point po=pointList.get(0);
+	        	 Doc doc=Globalqyt.dBer.getDocById(po.getId());
+	        	 System.out.println(doc.getDocCon());
 	        }
 	    }
 }

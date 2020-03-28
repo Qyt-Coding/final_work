@@ -49,13 +49,13 @@ public class TermVector {
 		catch (Exception e) {
 		}
 
-		return 1-mult2Vector(aV1, aV2)/(a1*a2);
+		return 1-mult2Vector(aV1, aV2)/(a1*a2);//1-cos
 	}
 	public static double mult2Vector(docVector aV1, docVector aV2){
-		int num = aV1.getitemNum();
+		int num = aV1.getitemNum();//文档的数量,相当于维度
 		double tem= 0 ;
 		for(int i =0; i< num; i++ ){
-			tem += aV1.getValue()[i] * aV2.getValue()[i];  
+			tem += aV1.getValue()[i] * aV2.getValue()[i];//x*x+y*y+z*z
 		}
 		return tem;
 	}

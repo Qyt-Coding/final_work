@@ -40,7 +40,7 @@ public class zplCluster {
 			}
 			value[i]= tmp/(double)weidu;//全部x相加
 		}
-		_mean.setValue(value);
+		_mean.setValue(value);//设坐标
 		try{
 			if(_mean.computeLength() ==0)
 				throw new Exception();

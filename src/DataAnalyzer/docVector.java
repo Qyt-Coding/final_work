@@ -3,8 +3,8 @@ package DataAnalyzer;
 public class docVector {
 	private int _itemNum;  //doc的数量
 	private int docID;     //doc的id
-	private int _nearestCluster;
-	private double _nearestDist;
+	private int _nearestCluster;//文档到族的最短距离的族下标
+	private double _nearestDist;//文档到族的最短距离
 	private double _clusterAssignment;
 	private double[] _itemValue;//向量
 	private double[] dist;
@@ -33,6 +33,9 @@ public class docVector {
 	public int getnearestCluster(){
 		return _nearestCluster;
 	}
+	/**
+	 * 根据距离，把数据分类到具体的族
+	 */
 	public void setnearestCluster(){
 		int cluster=0;
 		for(int i=0; i<_k;i++){
@@ -41,7 +44,7 @@ public class docVector {
 				cluster = i;
 			}
 		}
-		_nearestCluster = cluster;
+		_nearestCluster = cluster;//
 	}
 	public void setDist(int i,double dis){
 		dist[i]= dis; 
@@ -67,7 +70,7 @@ public class docVector {
 	}
 	public double computeLength(){
 		double s = 0;
-		s = Math.sqrt(TermVector.mult2Vector(this, this));
+		s = Math.sqrt(TermVector.mult2Vector(this, this));//开根号
 			
 		return s;
 	}
