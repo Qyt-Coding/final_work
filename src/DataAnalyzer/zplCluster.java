@@ -64,6 +64,21 @@ public class zplCluster {
 			return true;
 		}
 		return false;
-
 	}
+	
+	/**
+	 * 当误差小于0.01的时候，停止迭代
+	 * doc1比较对象
+	 * c误差值
+	 */
+	public boolean isPass(docVector doc1,double c) {
+		double a=this.getMean().computeLength();
+		double b=doc1.computeLength();
+		if(a-b>=c) {
+			System.out.println("a-b:"+a + - + b);
+			return false;//如果大于，继续迭代
+		}
+		return true;
+	}
+	
 }

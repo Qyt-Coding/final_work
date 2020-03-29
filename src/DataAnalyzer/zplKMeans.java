@@ -2,6 +2,8 @@ package DataAnalyzer;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import jxl.Workbook;
@@ -12,10 +14,12 @@ import jxl.write.WriteException;
 import jxl.write.biff.RowsExceededException;
 
 public class zplKMeans {
+	final double ERROR_DATE = 0.00001;
+
 	private int docNum;
 	private int _k;
-	private int[] _result;//结果集
-	private zplCluster[] _clusterSet;//集群
+	private int[] _result;// 结果集
+	private zplCluster[] _clusterSet;// 集群
 	// 原始数据
 	private TermVector _vectorSet;
 
@@ -34,7 +38,7 @@ public class zplKMeans {
 	}
 
 	public boolean readVectorSet() {
-		_vectorSet = Global.dBer.buildTermVector();//对每个文档进行向量化
+		_vectorSet = Global.dBer.buildTermVector();// 对每个文档进行向量化
 		if (_vectorSet == null)
 			return false;
 		docNum = Global.docNum;
@@ -42,13 +46,15 @@ public class zplKMeans {
 	}
 
 	public void start() {
-		int it = 0;
-		while (true) {
+		int it = 0;// 计数器
+		List<docVector> originDocList = new ArrayList<docVector>();
+		while (it <= 20) {// 最大遍历20次
 			System.out.println("times:" + it);
 			it++;
 			// 重新计算每个聚类的均值
 			for (int i = 0; i < _k; i++) {
-				_clusterSet[i].UpdateMean();//重新的对聚类进行计算
+				originDocList.add(_clusterSet[i].getMean());
+				_clusterSet[i].UpdateMean();// 重新的对聚类进行计算
 				System.out.println("mean:" + _clusterSet[i].getMean().computeLength());
 				if (_clusterSet[i].getMean().computeLength() == 0) {
 					System.out.println("id:" + i);
@@ -70,13 +76,13 @@ public class zplKMeans {
 			}
 			// 4、比较每个数据最近的聚类是否就是它所属的聚类
 			// 如果全相等表示所有的点已经是最佳距离了
-			int k = 0;
-			for (docVector set : _vectorSet.getList()) {
-				if (set.isEqAssig())
-					k++;
-			}
-			if (k == _vectorSet.getdocNum())
-				break;
+//			int k = 0;
+//			for (docVector set : _vectorSet.getList()) {
+//				if (set.isEqAssig())
+//					k++;
+//			}
+//			if (k == _vectorSet.getdocNum())
+//				break;
 			// 5、否则需要重新调整资料点和群聚类的关系，调整完毕后再重新开始循环；
 			// 需要修改每个聚类的成员和表示某个数据属于哪个聚类的变量
 			// 清空完
@@ -85,8 +91,18 @@ public class zplKMeans {
 			}
 			for (docVector set : _vectorSet.getList()) {
 				_clusterSet[set.getnearestCluster()].addDoc(set);
-				set.setAeqN();
+				// set.setAeqN();
 			}
+
+			int count = 0;// 计数器
+			for (int i = 0; i < _k; i++) {
+				boolean flag = _clusterSet[i].isPass(originDocList.get(i), ERROR_DATE);
+				if (flag) {
+					count++;
+				}
+			}
+			if (count == _k)
+				break;// 跳出去
 		}
 		/**
 		 * 这里明显有问题，不管数据如何，程序都只能走两遍，并不是根据具体阈值而停止工作的，
@@ -112,7 +128,7 @@ public class zplKMeans {
 		int flag = 0; // 是否已经生成过标志
 		while (count < _k) {
 			Random rdm = new Random(System.currentTimeMillis());
-			intRd = Math.abs(rdm.nextInt()) % docNum + 1;//45
+			intRd = Math.abs(rdm.nextInt()) % docNum + 1;// 45
 			for (int i = 0; i < _k; i++) {
 				if (intRet[i] == intRd) {
 					flag = 1;
@@ -131,7 +147,7 @@ public class zplKMeans {
 						count--;
 					} else {
 						_vectorSet.removeVector(vector);
-						//System.out.println("IDnum:" + intRd + ";content:" + vector.getWeiboCon());
+						// System.out.println("IDnum:" + intRd + ";content:" + vector.getWeiboCon());
 					}
 				}
 
@@ -157,6 +173,7 @@ public class zplKMeans {
 				if (size > 10) {
 					cotString = _clusterSet[_result[i]].getTerm().getList().get(0).getWeiboCon();
 					System.out.println("time:" + size);
+					System.out.println("集合长度" + _clusterSet[_result[i]].getTerm().getList().size());
 					System.out.println(
 							"text:" + cotString + " ID:" + _clusterSet[_result[i]].getTerm().getList().get(0).getID());
 
@@ -189,15 +206,26 @@ public class zplKMeans {
 			e.printStackTrace();
 		}
 
-		/*
-		 * int size = _clusterSet[_result[_k-1]].getNum(); for(int i = 0; i< size;i++){
-		 * String cotString =
-		 * _clusterSet[_result[_k-1]].getTerm().getList().get(i).getWeiboCon();
-		 * 
-		 * System.out.println("text:"+cotString+" ID:"+_clusterSet[_result[_k-1]].
-		 * getTerm().getList().get(i).getID()); }
-		 */
+//		int size = _clusterSet[_result[_k - 1]].getNum();
+//		for (int i = 0; i < size; i++) {
+//			String cotString = _clusterSet[_result[_k - 1]].getTerm().getList().get(i).getWeiboCon();
+//
+//			System.out.println(
+//					"text:" + cotString + " ID:" + _clusterSet[_result[_k - 1]].getTerm().getList().get(i).getID());
+//		}
+
 	}
+	
+	public void getAllClusterInfo() {
+		for(int i=0;i<20;i++){
+			List<docVector> docList=_clusterSet[i].getTerm().getList();
+			System.out.println("第 "+i+"个");
+			for(docVector doc:docList) {
+				System.out.println("内容："+doc.getWeiboCon()+" ID:"+doc.getID());
+			}
+		}
+	}
+	
 
 	private String String(int j) {
 		// TODO Auto-generated method stub

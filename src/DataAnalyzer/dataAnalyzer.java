@@ -11,6 +11,7 @@ public class dataAnalyzer {
 		kMeans.initRandom();//list cluster len:1
 		kMeans.start();
 		kMeans.showAll();
+		kMeans.getAllClusterInfo();
 		Global.dBer.closeDB();
 	}
 }
