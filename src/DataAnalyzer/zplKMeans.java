@@ -88,7 +88,10 @@ public class zplKMeans {
 				set.setAeqN();
 			}
 		}
-
+		/**
+		 * 这里明显有问题，不管数据如何，程序都只能走两遍，并不是根据具体阈值而停止工作的，
+		 * 具体可以看set.setAeqN();这句话，只要k的值等于文档的值，它就不循环了
+		 */
 	}
 
 	public int getK() {
