@@ -48,9 +48,9 @@ public class splitSystem {
 				ts.reset(); 
 				//迭代获取分词结果,加入到tmplist中待处理
 				while (ts.incrementToken()) {//遍历分词后的数组
-					//if(Global.markNolex(term.toString()) == false){
+					if(Global.markNolex(term.toString()) == false){
 						tmpList.add(term.toString());
-					//}
+					}
 				}
 				
 				//词频统计 tmpList里面放着分词后的数组
@@ -99,12 +99,17 @@ public class splitSystem {
 	}
 	
 	private Doc _target;
-
+	/**
+	 * 比较这个文本之前有没有录过
+	 * @param doc
+	 */
 	public void setDoc(String doc){
-		for(Doc c:Global.docList){
-			if (c.getDocCon().equals(doc)){
-				_target = c;
-				return;
+		if(Global.docList!=null) {
+			for(Doc c:Global.docList){
+				if (c.getDocCon()!=null &&c.getDocCon().equals(doc)){
+					_target = c;
+					return;
+				}
 			}
 		}
 		_target = null;

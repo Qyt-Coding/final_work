@@ -113,7 +113,7 @@ public class People {
 			for (WeiboDoc s : weiboList) {
 
 				String conString;
-				if (s.getRetweetedStatus() == null)
+				if (s.getRetweetedStatus() == null)//判断转发，如果是空，文本直接等于原文本
 					conString = s.getText();
 				else {
 					conString = (s.getRetweetedStatus().getText());
@@ -123,7 +123,7 @@ public class People {
 				s.setText(conString);
 				if (Global.markNoMean(conString) == false) {
 					// 加入文档词典		这里就是把文档添加到数据库里
-					if (Global.dBer.addDocqyt(s) == false)
+					if (Global.dBer.addDocqyt(s) == false)//插入数据库
 						throw new WeiboException("addDoc wrong");
 					// 进行分词
 					System.out.println("doc:" + conString);

@@ -214,13 +214,15 @@ public class DBHander {
 	 */
 	public boolean addDocqyt(WeiboDoc weiboDoc) {
 		Doc tmpDoc = new Doc();
-		statement = null;
-		try {
-			statement = conn.createStatement();
-		} catch (SQLException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+//		statement = null;
+//		try {
+//			statement = conn.createStatement();
+//		} catch (SQLException e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//		}
+		
+		
 		docCount++;
 		// 这个是id，自动增加用的
 		//tmpDoc.setDocID(docCount);
@@ -233,17 +235,37 @@ public class DBHander {
 		//}
 
 		// 更新数据库
-		String cmdString = "insert into doc(DocID,DocText,authorId,authorName) values(" +  docCount + ","
-				+ "'"
-				+ convertCharset(weiboDoc.getText()) + "','"+weiboDoc.getUser().getId()+"','"+weiboDoc.getUser().getScreen_name()+"');";
-		tmpDoc.setDocID(docCount);
-		tmpDoc.setDocCon(weiboDoc.getText());
-		tmpDoc.setAuthorId(weiboDoc.getUser().getId());
-		tmpDoc.setAuthorName(weiboDoc.getUser().getScreen_name());
+		//String cmdString = "insert into doc(DocID,DocText,authorId,authorName) values(" +  docCount + ","
+		//		+ "'"
+		//		+ convertCharset(weiboDoc.getText()) + "','"+weiboDoc.getUser().getId()+"','"+weiboDoc.getUser().getScreen_name()+"');";
+//		tmpDoc.setDocID(docCount);
+//		tmpDoc.setDocCon(weiboDoc.getText());
+//		tmpDoc.setAuthorId(weiboDoc.getUser().getId());
+//		tmpDoc.setAuthorName(weiboDoc.getUser().getScreen_name());
+		//------------------------
+		String cmdString="insert into doc(DocID,DocText,authorId,authorName,reposts_count,comments_count,attitudes_count) "
+				+ "values(?,?,?,?,?,?,?)";
+		try {
+			ptmt=conn.prepareStatement(cmdString);
+			ptmt.setInt(1, docCount);
+			ptmt.setString(2, convertCharset(weiboDoc.getText()));
+			ptmt.setString(3, weiboDoc.getUser().getId());
+			ptmt.setString(4,weiboDoc.getUser().getScreen_name());
+			ptmt.setInt(5, weiboDoc.getRepostsCount());
+			ptmt.setInt(6, weiboDoc.getCommentsCount());
+			ptmt.setInt(7, weiboDoc.getAttitudesCount());
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+//		tmpDoc.setDocID(docCount);
+//		tmpDoc.setDocCon(weiboDoc.getText());
+//		tmpDoc.setAuthorId(weiboDoc.getUser().getId());
+//		tmpDoc.setAuthorName(weiboDoc.getUser().getScreen_name());
 		
 		try {
-
-			statement.executeUpdate(cmdString);
+			ptmt.execute();
+			//statement.executeUpdate(cmdString);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			System.out.println("----------------出错了");

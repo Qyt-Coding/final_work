@@ -264,17 +264,17 @@ public class CollectorWeiBo extends BreadthCrawler {
 	}
 
 	/**
-	 * show 将所有页面的种子添加进入队列
+	 * show 将所有页面的种子添加进入队列()不需要  2020/4 /12
 	 */
-	void addAllseeds() {
-
-		for (pageIndex = 1; pageIndex <= maxPage; pageIndex++) {
-			String index = Integer.toString(pageIndex);
-			System.out.println("---最大的页数----" + maxPage);
-			String nextUrl = RootUrl + "&page=" + index;
-			this.addSeed(nextUrl);
-		}
-	}
+//	void addAllseeds() {
+//
+//		for (pageIndex = 1; pageIndex <= maxPage; pageIndex++) {
+//			String index = Integer.toString(pageIndex);
+//			System.out.println("---最大的页数----" + maxPage);
+//			String nextUrl = RootUrl + "&page=" + index;
+//			this.addSeed(nextUrl);
+//		}
+//	}
 
 	// 判断一个任务
 	boolean taskEnd = false;
@@ -373,6 +373,19 @@ public class CollectorWeiBo extends BreadthCrawler {
 //								e.printStackTrace();
 //								System.out.println(e.toString());
 //							}
+							//-------------------------------------
+							try {
+								//获得转发数
+								weiboDoc.setRepostsCount(json.get("reposts_count").getAsInt());
+							}catch(Exception e) {
+								System.out.println("------------------------出错了！！！！");
+								weiboDoc.setRepostsCount(1000000);
+							}
+							//评论数
+							weiboDoc.setCommentsCount(json.get("comments_count").getAsInt());
+							//点赞数
+							weiboDoc.setAttitudesCount(json.get("attitudes_count").getAsInt());
+							//*-------------------------------------
 							list.add(weiboDoc);
 						}
 					}

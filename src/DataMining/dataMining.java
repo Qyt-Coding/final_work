@@ -49,7 +49,7 @@ public class dataMining {
 		People tmp;
 		//处理数据，建立倒排索引   loginWeibo是根据你自身的id，获得到关注用户的id号码
 		//然后下面的方法就是根据
-		while(initCount != 0){
+		while(initCount != 0){//这里20个
 			tmp = Global.queue.getOut();
 			count++;
 			System.out.println("id    ---->"+tmp.getID()+"-----"+"-----第"+count+"个count");
