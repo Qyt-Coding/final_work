@@ -225,14 +225,14 @@ public class DBHander {
 		
 		docCount++;
 		// 这个是id，自动增加用的
-		//tmpDoc.setDocID(docCount);
+		tmpDoc.setDocID(docCount);
 		//aDocCon.setId(docCount);
 		// 转发的那个地方
-		//if (aDocCon.getRetweetedStatus() == null)
-			//tmpDoc.setCon(aDocCon.getText());
-	//	else {
-			//tmpDoc.setCon(aDocCon.getRetweetedStatus().getText());
-		//}
+//		if (weiboDoc.getRetweetedStatus() == null)
+//			tmpDoc.setCon(weiboDoc.getText());
+//		else {
+//			tmpDoc.setCon(weiboDoc.getRetweetedStatus().getText());
+//		}
 
 		// 更新数据库
 		//String cmdString = "insert into doc(DocID,DocText,authorId,authorName) values(" +  docCount + ","
@@ -258,10 +258,10 @@ public class DBHander {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-//		tmpDoc.setDocID(docCount);
-//		tmpDoc.setDocCon(weiboDoc.getText());
-//		tmpDoc.setAuthorId(weiboDoc.getUser().getId());
-//		tmpDoc.setAuthorName(weiboDoc.getUser().getScreen_name());
+		tmpDoc.setDocID(docCount);
+		tmpDoc.setDocCon(weiboDoc.getText());
+		tmpDoc.setAuthorId(weiboDoc.getUser().getId());
+		tmpDoc.setAuthorName(weiboDoc.getUser().getScreen_name());
 		
 		try {
 			ptmt.execute();
@@ -278,6 +278,13 @@ public class DBHander {
 		Global.docList.add(tmpDoc);
 		return true;
 	}
+	
+	
+	 
+	
+	
+	
+	
 
 	// word 单词 tf 这个单词出现的次数 docID为文档的ID
 	public boolean addLexicon(String word, int tf, int docID) {

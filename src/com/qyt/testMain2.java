@@ -100,9 +100,7 @@ public class testMain2 {
 	
 	@Test
 	public  void test6() {
-		double[] doub=new double[10];
-		doub[5]=5.0;
-		System.out.println(Arrays.toString(doub));
-		System.out.println(doub[0]);
+		double d= Math.sqrt(2);
+		System.out.println(d);
 	}
 }

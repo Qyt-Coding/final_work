@@ -2,7 +2,12 @@ package DataAnalyzer;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
+
+import com.bean.WeiboDoc;
 
 import jxl.Workbook;
 import jxl.write.Label;
@@ -14,8 +19,8 @@ import jxl.write.biff.RowsExceededException;
 public class zplKMeans {
 	private int docNum;
 	private int _k;
-	private int[] _result;//结果集
-	private zplCluster[] _clusterSet;//集群
+	private int[] _result;// 结果集
+	private zplCluster[] _clusterSet;// 集群
 	// 原始数据
 	private TermVector _vectorSet;
 
@@ -34,7 +39,7 @@ public class zplKMeans {
 	}
 
 	public boolean readVectorSet() {
-		_vectorSet = Global.dBer.buildTermVector();//对每个文档进行向量化
+		_vectorSet = Global.dBer.buildTermVector();// 对每个文档进行向量化
 		if (_vectorSet == null)
 			return false;
 		docNum = Global.docNum;
@@ -48,7 +53,7 @@ public class zplKMeans {
 			it++;
 			// 重新计算每个聚类的均值
 			for (int i = 0; i < _k; i++) {
-				_clusterSet[i].UpdateMean();//重新的对聚类进行计算
+				_clusterSet[i].UpdateMean();// 重新的对聚类进行计算
 				System.out.println("mean:" + _clusterSet[i].getMean().computeLength());
 				if (_clusterSet[i].getMean().computeLength() == 0) {
 					System.out.println("id:" + i);
@@ -109,7 +114,7 @@ public class zplKMeans {
 		int flag = 0; // 是否已经生成过标志
 		while (count < _k) {
 			Random rdm = new Random(System.currentTimeMillis());
-			intRd = Math.abs(rdm.nextInt()) % docNum + 1;//45
+			intRd = Math.abs(rdm.nextInt()) % docNum + 1;// 生成随机数
 			for (int i = 0; i < _k; i++) {
 				if (intRet[i] == intRd) {
 					flag = 1;
@@ -128,7 +133,7 @@ public class zplKMeans {
 						count--;
 					} else {
 						_vectorSet.removeVector(vector);
-						//System.out.println("IDnum:" + intRd + ";content:" + vector.getWeiboCon());
+						// System.out.println("IDnum:" + intRd + ";content:" + vector.getWeiboCon());
 					}
 				}
 
@@ -217,4 +222,46 @@ public class zplKMeans {
 		}
 
 	}
+
+	public void calculate() {
+		List<WeiBoVo> vo=new ArrayList<WeiBoVo>();
+		for(int j=0;j<_clusterSet.length;j++) {
+			WeiBoVo v=new WeiBoVo();
+			List<WeiboDoc> weiboDocList=new ArrayList<WeiboDoc>();
+			List<docVector> t=_clusterSet[j].getTerm().getList();
+			for(int i=0;i<t.size();i++) {
+				long total=0;
+				docVector docV=t.get(i);
+				 WeiboDoc weibo=Global.dBer.getDocById(docV.getID());
+				 Integer repostsCount=weibo.getRepostsCount();
+				 if(repostsCount==null) {
+					 repostsCount=0;
+				 }
+				 Integer commentsCount=weibo.getCommentsCount();
+				 if(commentsCount==null) {
+					 commentsCount=0;
+				 }
+				 Integer attitudesCount=weibo.getAttitudesCount();
+				 if(attitudesCount==null) {
+					 attitudesCount=0;
+				 }
+				 total=repostsCount*3+commentsCount*2+attitudesCount;
+				 weibo.setRank(total);
+				 weiboDocList.add(weibo);
+			}
+			v.setId(j);
+			v.setWeiboList(weiboDocList);
+			vo.add(v);
+		}
+		
+		//遍历
+		for(WeiBoVo v1:vo) {
+			List<WeiboDoc> list=v1.getWeiboList();
+			WeiboDoc[] weiboTable = new WeiboDoc[list.size()];
+			list.toArray(weiboTable);
+			Arrays.sort(weiboTable);
+			System.out.println("最大的值:"+weiboTable[0].getRank()+"   "+weiboTable[0].getText());
+		}
+	}
+
 }

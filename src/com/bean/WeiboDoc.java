@@ -2,12 +2,12 @@ package com.bean;
 
 import weibo4j.model.Status;
 
-public class WeiboDoc {
+public class WeiboDoc  implements Comparable<WeiboDoc>{
 	
 	String createdAt;
 	String id;
 	String  text;
-	Integer textLength;
+	Long rank;
 	String originalPic;  //原始图片
 	Integer repostsCount;  //转发数
 	Integer commentsCount; //评论数
@@ -32,11 +32,11 @@ public class WeiboDoc {
 	public void setText(String text) {
 		this.text = text;
 	}
-	public Integer getTextLength() {
-		return textLength;
+	public Long getRank() {
+		return rank;
 	}
-	public void setTextLength(Integer textLength) {
-		this.textLength = textLength;
+	public void setRank(Long rank) {
+		this.rank = rank;
 	}
 	public String getOriginalPic() {
 		return originalPic;
@@ -76,16 +76,13 @@ public class WeiboDoc {
 	}
 	@Override
 	public String toString() {
-		return "WeiboDoc [created_at=" + createdAt + ", id=" + id + ", text=" + text + ", textLength=" + textLength
+		return "WeiboDoc [createdAt=" + createdAt + ", id=" + id + ", text=" + text + ", rank=" + rank
 				+ ", originalPic=" + originalPic + ", repostsCount=" + repostsCount + ", commentsCount=" + commentsCount
 				+ ", attitudesCount=" + attitudesCount + ", retweetedStatus=" + retweetedStatus + ", user=" + user
-				+ ", getCreated_at()=" + getCreatedAt()  + ", getId()=" + getId() + ", getText()=" + getText()
-				+ ", getTextLength()=" + getTextLength() + ", getOriginalPic()=" + getOriginalPic()
-				+ ", getRepostsCount()=" + getRepostsCount() + ", getCommentsCount()=" + getCommentsCount()
-				+ ", getAttitudesCount()=" + getAttitudesCount() + ", getRetweetedStatus()=" + getRetweetedStatus()
-				+ ", getUser()=" + getUser() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-				+ ", toString()=" + super.toString() + "]";
+				+ "]";
 	}
-
+	public int compareTo(WeiboDoc o) {
+		return (int)(o.getRank()-this.getRank());
+	}
 	
 }

@@ -28,20 +28,27 @@ public class testMain {
 	    	Globalqyt.dBer.connectDB();
 	    	updateVector up=new updateVector();
 	    	
-	        KMeansRun kRun =new KMeansRun(20, up.initDocVector());
+	        KMeansRun kRun =new KMeansRun(4, up.initDocVector());
 
 	        Set<Cluster> clusterSet = kRun.run();
 	        System.out.println("单次迭代运行次数："+kRun.getIterTimes());
 	        for (Cluster cluster : clusterSet) {
 	        	System.out.println("++++"+cluster.getId());
 	        	 List<Point>pointList=cluster.getMembers();
-//	        	 for(Point p:pointList) {
-//	        		 Doc doc=Globalqyt.dBer.getDocById(p.getId());
-//	        		 System.out.println("文档Id：   "+doc.getDocID()+"  文档内容 ："+doc.getDocCon());
-//	        	 }
-	        	 Point po=pointList.get(0);
-	        	 Doc doc=Globalqyt.dBer.getDocById(po.getId());
-	        	 System.out.println(doc.getDocCon());
+	        	 for(Point p:pointList) {
+	        		 Doc doc=Globalqyt.dBer.getDocById(p.getId());
+	        		 System.out.println("文档Id：   "+doc.getDocID()+"  文档内容 ："+doc.getDocCon());
+	        	 }
+	        	 Point po=null;
+	        	 if(pointList!=null && pointList.size()!=0) {
+	        		 po=pointList.get(0);
+	        		 Doc doc=Globalqyt.dBer.getDocById(po.getId());
+		        	 System.out.println(doc.getDocCon());
+	        	 }else {
+	        		 System.out.println("该集合没有");
+	        	 }
+	        	
+	        	
 	        }
 	    }
 }

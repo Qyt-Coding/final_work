@@ -365,27 +365,15 @@ public class CollectorWeiBo extends BreadthCrawler {
 //							}
 
 							System.out.println(weiboDoc);
-							// 插入数据库里
-//							try {
-//								//db.insertWeiBoDoc(weiboDoc);
-//							} catch (SQLException e) {
-//								// TODO Auto-generated catch block
-//								e.printStackTrace();
-//								System.out.println(e.toString());
-//							}
-							//-------------------------------------
 							try {
-								//获得转发数
 								weiboDoc.setRepostsCount(json.get("reposts_count").getAsInt());
 							}catch(Exception e) {
 								System.out.println("------------------------出错了！！！！");
 								weiboDoc.setRepostsCount(1000000);
 							}
-							//评论数
 							weiboDoc.setCommentsCount(json.get("comments_count").getAsInt());
 							//点赞数
 							weiboDoc.setAttitudesCount(json.get("attitudes_count").getAsInt());
-							//*-------------------------------------
 							list.add(weiboDoc);
 						}
 					}

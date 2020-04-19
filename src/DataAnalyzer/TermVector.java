@@ -34,7 +34,9 @@ public class TermVector {
 	public int getdocNum(){
 		return _docNum;
 	}
-
+	/**
+	 * 求距离
+	 */
 
 	public static double getDist(docVector aV1, docVector aV2) {
 		double a1 = 0;

@@ -30,29 +30,19 @@ public class splitSystem {
 			wordlist.add(new wordAndCount(word, count));
 		}
 		public void begin_analyzer(Doc doc){
-			//构建IK分词器，使用smart分词模式
-			Analyzer analyzer = new IKAnalyzer(true);
-			StringReader reader = new StringReader(doc.getDocCon());
+			Analyzer analyzer = new IKAnalyzer(true);//创建Ik分词器，使用smart分词模式
+			StringReader reader = new StringReader(doc.getDocCon());//使用StringReader对微博文档进行分词
 			List<String> tmpList=new ArrayList<String>();
-			//获取Lucene的TokenStream对象
-		    TokenStream ts = null;
+		    TokenStream ts = null;	//获取Lucene的TokenStream对象
 			try {
-				ts = analyzer.tokenStream("myfield", reader);
-	 
-			    //获取词元文本属性
+				ts = analyzer.tokenStream("myfield", reader);//闯将myfield域
 			    CharTermAttribute term = ts.addAttribute(CharTermAttribute.class);
-
-			    
-			    
-			    //重置TokenStream（重置StringReader）
-				ts.reset(); 
-				//迭代获取分词结果,加入到tmplist中待处理
+				ts.reset();     //重置TokenStream（重置StringReader）
 				while (ts.incrementToken()) {//遍历分词后的数组
-					if(Global.markNolex(term.toString()) == false){
-						tmpList.add(term.toString());
+					if(Global.markNolex(term.toString()) == false){//判断该词是否是常用词
+						tmpList.add(term.toString());//term.toString()分词结果
 					}
 				}
-				
 				//词频统计 tmpList里面放着分词后的数组
 				for(String word:tmpList)
 				{
@@ -73,7 +63,6 @@ public class splitSystem {
 						wordlist.add(new wordAndCount(word,1));
 					}
 				}
-				
 				//加入单词词典    wordAndCount这个类，里面存放着分词后，这次词出现的频率
 				for(wordAndCount w: wordlist){
 					Global.dBer.addLexicon(w.word, w.count,doc.getDocID());

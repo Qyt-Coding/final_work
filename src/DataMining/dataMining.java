@@ -39,29 +39,48 @@ public class dataMining {
 		return true;
 		
 	}
-	
+	/**
+	 * 改版前
+	 * @return
+	 */
+//	public boolean process() throws Exception{
+//		int count=0; //计数用的，可以忽略不记
+//		int  initCount=Global.queue.getCount();//获得队列中的数
+//		People tmp;
+//		//处理数据，建立倒排索引   loginWeibo是根据你自身的id，获得到关注用户的id号码
+//		//然后下面的方法就是根据
+//		while(initCount != 0){//这里20个
+//			tmp = Global.queue.getOut();
+//			count++;
+//			System.out.println("id    ---->"+tmp.getID()+"-----"+"-----第"+count+"个count");
+//			if(tmp == null)
+//				return false;
+//			//数据处理   //这里的意思是，根据用户的id获得微博
+//			if(tmp.getDoc() == false)
+//				return false;
+//			//根据id来查找关注人的好友信息
+//			tmp.getFriends(Global.queue);
+//			Global.usedIDList.add(tmp.getID());
+//			Global.dBer.insertUsedList(tmp.getID());
+//			initCount--;
+//		}
+//		return true;
+//	}
+	/**
+	 * 改版后
+	 */
 	public boolean process() throws Exception{
-		int count=0; //计数用的，可以忽略不记
-
-		int  initCount=Global.queue.getCount();
-		
-		
+		int  initCount=20;//获得队列中的数
 		People tmp;
-		//处理数据，建立倒排索引   loginWeibo是根据你自身的id，获得到关注用户的id号码
-		//然后下面的方法就是根据
-		while(initCount != 0){//这里20个
-			tmp = Global.queue.getOut();
-			count++;
-			System.out.println("id    ---->"+tmp.getID()+"-----"+"-----第"+count+"个count");
-			if(tmp == null)
+		while(initCount != 0){//循环遍历20次
+			tmp = Global.queue.getOut();//从队列中获得微博用户
+			if(tmp == null)//非空判断，非必要
 				return false;
-			//数据处理   //这里的意思是，根据用户的id获得微博
-			if(tmp.getDoc() == false)
+			if(tmp.getDoc() == false)//获得该用户的文档
 				return false;
-			//根据id来查找关注人的好友信息
-			tmp.getFriends(Global.queue);
-			Global.usedIDList.add(tmp.getID());
-			Global.dBer.insertUsedList(tmp.getID());
+			tmp.getFriends(Global.queue);//获得该用户所关注的用户信息
+			Global.usedIDList.add(tmp.getID());//把已经处理过的用户id放到队列中
+			Global.dBer.insertUsedList(tmp.getID());//把用户Id插入数据库
 			initCount--;
 		}
 		return true;

@@ -38,8 +38,8 @@ public class DBWeiBoDoc {
 		ptmt.setString(2, weiboDoc.getId());
 		ptmt.setString(3, weiboDoc.getText());
 		// weiboDoc.getTextLength()==null?0:weiboDoc.getTextLength();
-		if (weiboDoc.getTextLength() != null) {
-			ptmt.setInt(4, weiboDoc.getTextLength());
+		if (weiboDoc.getRank() != null) {
+			ptmt.setLong(4, weiboDoc.getRank());
 		} else {
 			ptmt.setInt(4, 0);
 		}

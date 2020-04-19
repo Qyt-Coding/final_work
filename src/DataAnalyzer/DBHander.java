@@ -6,6 +6,10 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.bean.WeiboDoc;
 
 public class DBHander {
 	private int docCount ;//文档的数量
@@ -148,20 +152,15 @@ public class DBHander {
 			value[i]= 0; 
 		}
 		try {
-
 			Statement statement = conn.createStatement();
 			resultSet = statement.executeQuery(cmdString);
 			while (resultSet.next()) {
 				lexiconID = resultSet.getInt("lexiconID");
 				tf = resultSet.getInt("tf");//tf是这个单词在某个文档出现的次数
 				idf = getIDf(lexiconID);//其实就是从lexcion表里取idf这个值
-				
 				value[lexiconID -1] = tf*idf;
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-
-			e.printStackTrace();
 			System.out.println("lex ID:"+lexiconID);
 		}
 		if(zeroVector(value) == false){
@@ -191,7 +190,7 @@ public class DBHander {
 				if(tmp != null){
 					vector.addVector(tmp);
 					Global.docNum ++;
-					System.out.println("docnum"+Global.docNum);
+					//System.out.println("docnum"+Global.docNum);
 				}
 			}
 		} catch (SQLException e) {
@@ -217,5 +216,30 @@ public class DBHander {
 		}
 		
 		return temp;
+	}
+	/**
+	 *获得整个doc 
+	 */
+	public WeiboDoc getDocById(int docID){
+		String cmdString = "select * from doc where docid="+docID+";";
+		Statement ste;
+		WeiboDoc weibo=new WeiboDoc();
+		try {
+			ste = conn.createStatement();
+			ResultSet resultSet = ste.executeQuery(cmdString);
+			while(resultSet.next()){
+				
+				weibo.setId(resultSet.getString("docId"));
+				weibo.setCommentsCount(resultSet.getInt("attitudes_count"));
+				weibo.setRepostsCount(resultSet.getInt("reposts_count"));
+				weibo.setCommentsCount(resultSet.getInt("comments_count"));
+				weibo.setText(resultSet.getString("docText")); 
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return weibo;
 	}
 }
