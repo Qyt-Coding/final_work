@@ -260,7 +260,7 @@ public class zplKMeans {
 			WeiboDoc[] weiboTable = new WeiboDoc[list.size()];
 			list.toArray(weiboTable);
 			Arrays.sort(weiboTable);
-			System.out.println("最大的值:"+weiboTable[0].getRank()+"   "+weiboTable[0].getText());
+			System.out.println("最大的值:"+weiboTable[0].getRank()+"   "+weiboTable[0].getText() +" ID："+weiboTable[0].getId());
 		}
 	}
 

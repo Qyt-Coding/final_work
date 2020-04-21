@@ -342,12 +342,40 @@ public class CollectorWeiBo extends BreadthCrawler {
 							// 一般第一条不行
 							continue;
 						} else {
+							
+							/**
+							 * 开始对转发的文章进行全爬取
+							 */
+							if(json.has("retweeted_status")) {
+								System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
+								System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
+								System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
+								System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
+								System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
+								System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
+								JsonObject j1=json.get("retweeted_status").getAsJsonObject();
+								String reText=j1.get("text").toString();//将转发里的数据取出来
+								json.addProperty("text", Utilqyt1.getInstance().removeStrHtml(reText));
+								System.out.println(json.get("text").toString());
+								System.out.println(json.get("id").toString());
+								System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
+								System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
+								System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
+								System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
+							}
+							
+							
 							// 对进行了文本省略的条目进行替换。
 							String  jsonText=json.get("text").toString();
 							json.addProperty("text", Utilqyt1.getInstance().removeStrHtml(jsonText));
 							if (json.toString().indexOf("...全文") != -1) {
 								json = replaceFullContrnt(json);
 							}
+							
+							
+							
+							
+							
 							Gson gson = new Gson();
 							// 把json转成bean
 							weiboDoc = gson.fromJson(json, WeiboDoc.class);
