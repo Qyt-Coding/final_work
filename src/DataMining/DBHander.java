@@ -43,7 +43,9 @@ public class DBHander {
 	public Connection getCon() {
 		return conn;
 	}
-
+	/**
+	 *usedlist表 
+	 */
 	public boolean initUsedList() {
 		String cmdString = "select useid from usedlist;";
 		statement = null;
@@ -87,7 +89,9 @@ public class DBHander {
 		}
 		return true;
 	}
-
+	/**
+	 * 初始化数据库
+	 */
 	public boolean connectDB() {
 		String driver = "com.mysql.jdbc.Driver";
 		// URL指向要访问的数据库名scutcs
@@ -111,7 +115,9 @@ public class DBHander {
 		}
 		return false;
 	}
-
+	/**
+	 * 初始化文本和lexcion
+	 */
 	public void initValue() {
 		// statement.executeUpdate(cmdString);
 		try {
@@ -134,7 +140,6 @@ public class DBHander {
 				lexCount = a;
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -155,7 +160,7 @@ public class DBHander {
 	}
 
 	public boolean addDoc(String s, int i) {
-//更新数据库
+		//更新数据库
 
 		String cmdString = "insert into doc(docid,DocText) values(" + i + ",'" + convertCharset(s) + "');";
 		try {

@@ -230,6 +230,8 @@ public class DBHander {
 			while(resultSet.next()){
 				
 				weibo.setId(resultSet.getString("docId"));
+				weibo.getUser().setId(resultSet.getString("authorId"));
+				weibo.getUser().setId(resultSet.getString("authorName"));
 				weibo.setCommentsCount(resultSet.getInt("attitudes_count"));
 				weibo.setRepostsCount(resultSet.getInt("reposts_count"));
 				weibo.setCommentsCount(resultSet.getInt("comments_count"));

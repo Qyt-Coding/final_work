@@ -260,7 +260,12 @@ public class zplKMeans {
 			WeiboDoc[] weiboTable = new WeiboDoc[list.size()];
 			list.toArray(weiboTable);
 			Arrays.sort(weiboTable);
-			System.out.println("最大的值:"+weiboTable[0].getRank()+"   "+weiboTable[0].getText() +" ID："+weiboTable[0].getId());
+		//	for(WeiboDoc v2:weiboTable) {
+		//		System.out.println("热点值："+v2.getRank()+"    "+"   :"+v2.getText());
+		//	}
+			System.out.println("用户名字"+weiboTable[0].getUser().getId()+"最大的值:"+weiboTable[0].getRank()+"   "+weiboTable[0].getText() +" ID："+weiboTable[0].getId());
+			System.out.println("-------------------------------------------------------------------------------------------------");
+			
 		}
 	}
 

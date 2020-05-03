@@ -127,7 +127,9 @@ public class People {
 						throw new WeiboException("addDoc wrong");
 					// 进行分词
 					System.out.println("doc:" + conString);
-					if (s.getRetweetedStatus() == null)
+					
+					
+					if (s.getRetweetedStatus() == null)//转发
 						Global.split.setDoc(s.getText());
 					else {
 						Global.split.setDoc(s.getRetweetedStatus().getText());

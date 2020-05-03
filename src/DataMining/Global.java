@@ -11,7 +11,7 @@ import java.util.List;
 public final class Global {
 	public static String access_token = "2.00QT9bhHp5zdPC00456d84f6px7AxB";
 	public static String screen_name = "mylove25168";
-	public static String uIDString = "5492443184";  // 6486005242
+	public static String uIDString = "6486005242";  // 6486005242
 	public static int docCount = 0;
 	public static int ad = 1;
 	public static int unad = 0;
@@ -63,7 +63,6 @@ public final class Global {
 				System.out.println("no Mean:");
 				return true;
 			}
-
 		}
 		return false;
 	}
