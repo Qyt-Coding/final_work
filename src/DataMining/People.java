@@ -37,19 +37,12 @@ public class People {
 
 	// 得到朋友列表，并加入人物队列
 	public boolean getFriends(PeopleQueue queue) throws Exception {
-		//fm = new Friendships(Global.access_token);
-		// fm.client.setToken(Global.access_token);
 		try {
-			//UserWapper users = fm.getFriendsByID(_uID);
 			CollectorWeiBoClose crawler=new CollectorWeiBoClose("crawl", true);
 			crawler.set_uID(_uID);
 			crawler.addAllseedqyt(crawler.get_uID());
 			crawler.setThreads(1);
-			// crawler.executeInterval = 1500;
 			crawler.sleepTime = 7000;
-			// 测试获取全文方法
-			// System.out.println(crawler.getFullText("4080915241593181"));
-			// 关闭文件
 			crawler.start(100);
 			/**
 			 * 上面那段代码是获得全部关注的用户信息
@@ -86,29 +79,22 @@ public class People {
 	}
 
 	public boolean getDoc() throws Exception {
-		//tm = new Timeline(Global.access_token);
-		// tm.client.setToken(Global.access_token);
 		Global.usedIDList.add(_uID);
 		try {
-			// StatusWapper status = tm.getUserTimeline();
-		//	StatusWapper status = tm.getUserTimelineByUid(_uID);
 			CollectorWeiBo weiboData = new CollectorWeiBo("crawl", true);
 			//启动这个程序，需要设置uid
 			//启动
 			weiboData.set_uID(_uID);
 			weiboData.addAllseedqyt(weiboData.get_uID());
 			weiboData.setThreads(1);
-			// crawler.executeInterval = 1500;
 			weiboData.sleepTime = 3000;
 			// 测试获取全文方法
-			// System.out.println(crawler.getFullText("4080915241593181"));
 			// 关闭文件
 			weiboData.start(100);
-			
 			if(weiboData.out!=null)
 				weiboData.out.close();
 			//接收数据
-			List<WeiboDoc> weiboList = weiboData.getWeiboList();
+			List<WeiboDoc> weiboList = weiboData.getWeiboList();//
 			//因为我爬数据，只循环了两次，所以这里最多有20条数据。
 			for (WeiboDoc s : weiboList) {
 
@@ -121,7 +107,7 @@ public class People {
 				conString=Utilqyt.replaceAllD(conString);
 				conString=Utilqyt.emo(conString);
 				s.setText(conString);
-				if (Global.markNoMean(conString) == false) {
+				if (Global.markNoMean(conString) == false) {//简单的过滤
 					// 加入文档词典		这里就是把文档添加到数据库里
 					if (Global.dBer.addDocqyt(s) == false)//插入数据库
 						throw new WeiboException("addDoc wrong");

@@ -33,7 +33,11 @@ public class Liexicon {
 	}
 	public void computeIDF(double allDOcCount){
 		//IDF = (Math.log(allDOcCount/docF)/Math.log(2))+0.5;
+		System.out.println("computeIDF+    "+allDOcCount);
 		IDF=(Math.log(allDOcCount/(docF+1)));
+		System.out.println("IDF+    "+IDF);
+		System.out.println("getLexicon+    "+this.getLexicon());
+		System.out.println("--------------------------------------------");
 	}
 	public void updatedocF(){
 		//qyt

@@ -219,14 +219,6 @@ public class DBHander {
 	 */
 	public boolean addDocqyt(WeiboDoc weiboDoc) {
 		Doc tmpDoc = new Doc();
-//		statement = null;
-//		try {
-//			statement = conn.createStatement();
-//		} catch (SQLException e1) {
-//			// TODO Auto-generated catch block
-//			e1.printStackTrace();
-//		}
-		
 		
 		docCount++;
 		// 这个是id，自动增加用的

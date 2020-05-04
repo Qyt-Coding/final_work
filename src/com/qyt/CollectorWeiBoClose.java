@@ -120,27 +120,10 @@ public class CollectorWeiBoClose extends BreadthCrawler {
 
 	public CollectorWeiBoClose(String crawlPath, boolean autoParse) throws IOException {
 		super(crawlPath, autoParse);
-		// 初始化配置
-		// from=1087095010&wm=20005_0002&
-		// 种子页
-		// seedUrl =
-		// "https://m.weibo.cn/api/container/getIndex?type=uid&value=1774978073&containerid=1076031774978073&page=1";
-		// RootUrl =
-		// "https://m.weibo.cn/api/container/getIndex?type=uid&value=1774978073&containerid=1076031774978073";
-
-		// maxPage =getMaxPage(seedUrl);//最大页初始化
-
-		// addAllseeds();//添加所有种子
-
-		// this.addSeed(seedUrl);//添加种子
-		// 文件读写
-
 	}
-
 	/**
 	 * 创建一个全局的List
 	 */
-
 	List<User> WeiboList = new ArrayList<User>();
 
 	public List<User> getWeiboList() {

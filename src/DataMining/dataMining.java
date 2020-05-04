@@ -2,7 +2,7 @@ package DataMining;
 
 import java.io.IOException;
 
-//这个是数据获取模块的主程序
+
 public class dataMining {
 
 	public boolean mainDataMining() throws Exception{
