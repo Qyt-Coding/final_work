@@ -16,7 +16,7 @@ public class Liexicon {
 		LexID = lexID;
 		docF = dof;//docf
 		//IDF = (Math.log(Global.dBer.getDocCount()/1)/Math.log(2)) +0.5;
-		updatedocF();
+		//updatedocF();
 	}
 	public void setID(int num){
 		LexID = num;

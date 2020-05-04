@@ -115,13 +115,13 @@ public class People {
 					System.out.println("doc:" + conString);
 					
 					
-					if (s.getRetweetedStatus() == null)//转发
-						Global.split.setDoc(s.getText());
-					else {
-						Global.split.setDoc(s.getRetweetedStatus().getText());
-					}
-					//这里才是真正的分词。
-					Global.split.beginSplit();
+//					if (s.getRetweetedStatus() == null)//转发
+//						Global.split.setDoc(s.getText());
+//					else {
+//						Global.split.setDoc(s.getRetweetedStatus().getText());
+//					}
+//					//分词
+//					Global.split.beginSplit();
 				}
 			}
 //			for (Status s : status.getStatuses()) {

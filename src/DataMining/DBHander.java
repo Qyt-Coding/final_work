@@ -7,6 +7,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.bean.WeiboDoc;
 
@@ -303,7 +305,7 @@ public class DBHander {
 				//开启事务
 				conn.setAutoCommit(false);
 				s.updatedocF();
-				cmdString = "update lexcion set idf=" + s.getIDF() + ",docf=" + s.getDocF() + " where lexiconID="
+				cmdString = "update lexcion set idf=" + s.getIDF()+tf + ",docf=" + s.getDocF() + " where lexiconID="
 						+ s.getID() + ";";
 
 				statement.executeUpdate(cmdString);
@@ -344,7 +346,6 @@ public class DBHander {
 			}
 			cmdString = null;
 			// 建立倒排列表
-
 			cmdString = "insert into postingfile(lexiconID) values(" + lexCount + ");";
 			try {
 				statement.executeUpdate(cmdString);
@@ -411,5 +412,155 @@ public class DBHander {
 		}
 		return sLiexicon;
 	}
+	/**
+	 *获取到分页 
+	 */
+	public Page getPage() {
+		String sql="select  *  from doc";
+		String sql1="select  count(*)  from doc";
+		Page page=new Page();
+		List<WeiboDoc> list=new ArrayList<WeiboDoc>();
+		try {
+			conn.setAutoCommit(false);
+			statement = conn.createStatement();
+			
+			ResultSet rs = statement.executeQuery(sql);
+			while (rs.next()) {
+				 WeiboDoc weibo=new WeiboDoc();
+				 weibo.setId(rs.getInt("DocID")+"");
+				 weibo.setText(rs.getString("DocText"));
+				 list.add(weibo);
+			}
+			statement=null;
+			statement = conn.createStatement();
+			
+			ResultSet rs2 =statement.executeQuery(sql1);
+			int count=0;
+			if(rs2.next()) {
+				count=rs2.getInt(1);
+			}
+			page.setList(list);
+			page.setCount(count);
+		} catch (SQLException e1) {
+			e1.printStackTrace();
+			try {
+				conn.rollback();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}finally {
+			try {
+				conn.commit();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return page;
+	}
+	
+	
+	public boolean addLiexiconAndPosting(String word ,int tf ,int docId) {//这里的Tf是
+		
+		Liexicon s=null;
+		//判断有没有这个单词
+		s=isLexcion(word);
+		if(s==null){//说明表里没有这个单词
+			// 新的单词
+		lexCount++;
+		String cmdString=null;
+		Liexicon sLiexicon = new Liexicon(lexCount, word, 0);// lexCount这个是，自动增长的，
+		sLiexicon.updatedocF();//更新IDF的值
+		// 加入词典
+		cmdString = "insert into lexcion(lexiconID,IDF,lexicon,docF) values(" + sLiexicon.getID() + ","
+				+ sLiexicon.getIDF() + ",'" + convertCharset(sLiexicon.getLexicon()) + "'," + sLiexicon.getDocF()
+				+ ");";
+		try {
+			System.out.println(cmdString);
+			statement.executeUpdate(cmdString);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.toString());
+			e.printStackTrace();
+			return false;
+		}
+
+		
+		cmdString = null;
+		// 建立倒排列表
+		cmdString = "insert into postingfile(lexiconID) values(" + lexCount + ");";
+		try {
+			statement.executeUpdate(cmdString);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
+		
+		cmdString = null;
+		cmdString = "insert into postingitem(lexiconID,docid,tf) values(" + sLiexicon.getID() + "," + docId + ","
+				+ tf + ");";
+		try {
+			statement.executeUpdate(cmdString);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		} 
+		}else {
+			try {
+				
+				//开启事务
+				conn.setAutoCommit(false);
+				String cmdString =null;
+				s.updatedocF();
+				cmdString = "update lexcion set idf=" + s.getIDF()+tf + ",docf=" + s.getDocF() + " where lexiconID="
+						+ s.getID() + ";";
+
+				statement.executeUpdate(cmdString);
+				
+				cmdString = null;
+				// 更新倒排列表
+				cmdString = "insert into postingitem(lexiconID,docid,tf) values(" + s.getID() + "," + docId + "," + tf+");";
+				statement.executeUpdate(cmdString);
+				cmdString = null;
+			}  catch (SQLException e1) {
+				e1.printStackTrace();
+				try {
+					conn.rollback();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}finally {
+				try {
+					conn.commit();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		return true;
+	}
+	
+	public Liexicon isLexcion(String word) {
+		Liexicon sLiexicon = null;
+		String cmdString = "select * from lexcion where lexicon='" + convertCharset(word) + "';";
+		statement = null;
+		try {
+			statement = conn.createStatement();
+			ResultSet resultSet = statement.executeQuery(cmdString);
+			while (resultSet.next()) {
+				double idf = Double.parseDouble(resultSet.getString("idf"));
+				int lexID = resultSet.getInt("lexiconID");
+				int docF = resultSet.getInt("docF");// 单词出现次数
+				sLiexicon = new Liexicon(lexID, word, docF);
+				//sLiexicon.setIDF(idf);
+			}
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		return sLiexicon;
+	}
+	
 
 }
