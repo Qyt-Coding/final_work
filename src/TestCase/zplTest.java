@@ -22,7 +22,7 @@ import DataMining.*;
 
 public class zplTest {
 
-	//case1 测试数据获取模块
+	//第一个模块
 	@Test
 	public void testMining() throws Exception {
 		dataMining testdata = new dataMining();

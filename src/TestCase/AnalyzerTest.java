@@ -6,7 +6,7 @@ import DataAnalyzer.dataAnalyzer;
 
 public class AnalyzerTest {
 
-	//case5 分析数据
+	//第三个模块
 	@Test
 	public void testAnalyzer(){
 		dataAnalyzer ss = new dataAnalyzer();

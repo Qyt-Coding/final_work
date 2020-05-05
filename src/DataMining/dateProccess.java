@@ -11,7 +11,6 @@ import com.bean.WeiboDoc;
  */
 public class dateProccess {
 	
-	@Test
 	public void mainProccess() {
 		dateProccess proccess=new dateProccess();
 		Global.dBer.connectDB();
@@ -19,7 +18,6 @@ public class dateProccess {
 		Page page=Global.dBer.getPage();
 		List<WeiboDoc>  weiboList=page.getList();
 		for(WeiboDoc weibo:weiboList) {
-			Global.split.setDoc(weibo.getText());
 			Global.split.myBeginSplit(weibo);//分词不错
 		}
 		//分词

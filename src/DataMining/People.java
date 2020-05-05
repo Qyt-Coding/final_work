@@ -113,38 +113,8 @@ public class People {
 						throw new WeiboException("addDoc wrong");
 					// 进行分词
 					System.out.println("doc:" + conString);
-					
-					
-//					if (s.getRetweetedStatus() == null)//转发
-//						Global.split.setDoc(s.getText());
-//					else {
-//						Global.split.setDoc(s.getRetweetedStatus().getText());
-//					}
-//					//分词
-//					Global.split.beginSplit();
 				}
 			}
-//			for (Status s : status.getStatuses()) {
-//				String conString;
-//				if (s.getRetweetedStatus() == null)
-//					conString = s.getText();
-//				else {
-//					conString = (s.getRetweetedStatus().getText());
-//				}
-//				if (Global.markNoMean(conString) == false) {
-//					// 加入文档词典
-//					if (Global.dBer.addDoc(s) == false)
-//						throw new WeiboException("addDoc wrong");
-//					// 进行分词
-//					System.out.println("doc:" + conString);
-//					if (s.getRetweetedStatus() == null)
-//						Global.split.setDoc(s.getText());
-//					else {
-//						Global.split.setDoc(s.getRetweetedStatus().getText());
-//					}
-//					Global.split.beginSplit();
-//				}
-		//	}
 		} catch (WeiboException e) {
 			e.printStackTrace();
 			System.out.println("Error:" + e.getMessage());

@@ -39,12 +39,6 @@ public final class Global {
 	public static List<Doc> docList = new LinkedList<Doc>();
 	
 	public static boolean markNolex(String s){
-//		for(int i =0; i< noMeanLexNum;i++){
-//			if(s.matches(noMeanLex[i])){
-//				return true;
-//			}
-//
-//		}
 		for(int i=0;i<noMeanLex.length;i++) {
 			if(s.matches(noMeanLex[i])){
 				return true;
@@ -56,16 +50,8 @@ public final class Global {
 	 *简单过滤，过滤长度不大于6的 
 	 */
 	public static boolean markNoMean(String s){
-//		if(s.contains(noMeanStrings[0]))
-//			return true;
 		if(s.length() < 6)
 			return true;
-//		for(int i =0; i< noMeanNum;i++){
-//			if(s.matches(noMeanStrings[i])){
-//				System.out.println("no Mean:");
-//				return true;
-//			}
-//		}
 		for(int  i=0;i<noMeanStrings.length;i++) {
 			if(s.matches(noMeanStrings[i])) {
 				System.out.println("no Mean:");
