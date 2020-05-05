@@ -452,29 +452,23 @@ public class CollectorWeiBoClose extends BreadthCrawler {
 			e.printStackTrace();
 		}
 	}
-
+	/**
+	 * 测试方法
+	 * @param args
+	 * @throws Exception
+	 */
 	public static void main(String[] args) throws Exception {
 		CollectorWeiBoClose crawler = new CollectorWeiBoClose("crawl", true);
-		crawler.addAllseedqyt("5960445128");
+		crawler.addAllseedqyt("6486005242");
 		crawler.setThreads(1);
-		// crawler.executeInterval = 1500;
 		crawler.sleepTime = 7000;
-		// 测试获取全文方法
-		// System.out.println(crawler.getFullText("4080915241593181"));
-		// 关闭文件
 		crawler.start(100);
-
 		if (crawler.out != null)
 			crawler.out.close();
-
 		System.out.println("--------------------------" + crawler.getWeiboList().size());
-
-//		for (User user : crawler.getWeiboList()) {
-//			System.out.println(user);
-//		}
-//		for(WeiboDoc weiboDoc:crawler.getAllList()) {
-//			System.out.println(weiboDoc);
-//		}
+		for (User user : crawler.getWeiboList()) {
+			System.out.println(user);
+		}
 	}
 
 }

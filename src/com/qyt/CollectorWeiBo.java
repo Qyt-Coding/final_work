@@ -153,7 +153,7 @@ public class CollectorWeiBo extends BreadthCrawler {
 
 	List<WeiboDoc> WeiboList = new ArrayList<WeiboDoc>();
 
-	public List getWeiboList() {
+	public List<WeiboDoc> getWeiboList() {
 		return WeiboList;
 	}
 
@@ -280,7 +280,7 @@ public class CollectorWeiBo extends BreadthCrawler {
 	boolean taskEnd = false;
 
 	/**
-	 * qyt魔改 show 将所有页面的种子添加进入队列
+	 * qyt show 将所有页面的种子添加进入队列
 	 * 
 	 * @param _uID
 	 */
@@ -348,19 +348,11 @@ public class CollectorWeiBo extends BreadthCrawler {
 							 */
 							if(json.has("retweeted_status")) {
 								System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
-								System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
-								System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
-								System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
-								System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
-								System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
 								JsonObject j1=json.get("retweeted_status").getAsJsonObject();
 								String reText=j1.get("text").toString();//将转发里的数据取出来
 								json.addProperty("text", Utilqyt1.getInstance().removeStrHtml(reText));
 								System.out.println(json.get("text").toString());
 								System.out.println(json.get("id").toString());
-								System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
-								System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
-								System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
 								System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
 							}
 							
@@ -532,7 +524,9 @@ public class CollectorWeiBo extends BreadthCrawler {
 			e.printStackTrace();
 		}
 	}
-
+	/**
+	 * 测试方法
+	 */
 	public static void main(String[] args) throws Exception {
 		CollectorWeiBo crawler = new CollectorWeiBo("crawl", true);
 
@@ -541,18 +535,15 @@ public class CollectorWeiBo extends BreadthCrawler {
 		crawler.setThreads(1);
 		// crawler.executeInterval = 1500;
 		crawler.sleepTime = 7000;
-		// 测试获取全文方法
-		// System.out.println(crawler.getFullText("4080915241593181"));
-		// 关闭文件
 		crawler.start(100);
 		if (crawler.out != null)
 			crawler.out.close();
 
 		System.out.println("--------------------------" + crawler.getWeiboList().size());
 
-//		for(WeiboDoc weiboDoc:crawler.getAllList()) {
-//			System.out.println(weiboDoc);
-//		}
+		for(WeiboDoc weiboDoc:crawler.getWeiboList()) {
+			System.out.println(weiboDoc);
+		}
 	}
 
 }
