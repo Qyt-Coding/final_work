@@ -24,3 +24,5 @@ public class dateProccess {
 		Global.dBer.closeDB();
 	}
 }
+
+

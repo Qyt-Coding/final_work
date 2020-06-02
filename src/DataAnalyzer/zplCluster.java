@@ -59,7 +59,7 @@ public class zplCluster {
 	public boolean setCluster(TermVector _v) {
 		if(_v != null){
 			_vector = _v;
-			System.out.println("list cluster len:"+_v.getList().size());
+			//System.out.println("list cluster len:"+_v.getList().size());
 			UpdateMean();
 			return true;
 		}

@@ -12,7 +12,7 @@ public class KMeansRun {
 
     private int iterMaxTimes = 100000;            //单次迭代最大运行次数
     private int iterRunTimes = 0;                 //单次迭代实际运行次数
-    private double disDiff = (double) 0.01;         //单次迭代终止条件，两次运行中类中心的距离差
+    private double disDiff = (double) 0.1;         //单次迭代终止条件，两次运行中类中心的距离差
 
     private List<double[]> original_data =null;    //用于存放，原始数据集  
     private static List<Point> pointList = null;  //用于存放，原始数据集所构建的点集

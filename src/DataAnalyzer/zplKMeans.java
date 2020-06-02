@@ -49,12 +49,12 @@ public class zplKMeans {
 	public void start() {
 		int it = 0;
 		while (true) {
-			System.out.println("times:" + it);
+			//System.out.println("times:" + it);
 			it++;
 			// 重新计算每个聚类的均值
 			for (int i = 0; i < _k; i++) {
 				_clusterSet[i].UpdateMean();// 重新的对聚类进行计算
-				System.out.println("mean:" + _clusterSet[i].getMean().computeLength());
+				//System.out.println("mean:" + _clusterSet[i].getMean().computeLength());
 				if (_clusterSet[i].getMean().computeLength() == 0) {
 					System.out.println("id:" + i);
 					return;
@@ -158,9 +158,9 @@ public class zplKMeans {
 				int size = _clusterSet[_result[i]].getTerm().getList().size();
 				if (size > 10) {
 					cotString = _clusterSet[_result[i]].getTerm().getList().get(0).getWeiboCon();
-					System.out.println("time:" + size);
-					System.out.println(
-							"text:" + cotString + " ID:" + _clusterSet[_result[i]].getTerm().getList().get(0).getID());
+					//System.out.println("time:" + size);
+					//System.out.println(
+					//		"text:" + cotString + " ID:" + _clusterSet[_result[i]].getTerm().getList().get(0).getID());
 
 					// 在Label对象的构造子中指名单元格位置是第j列第i行(j,i)以及单元格内容为str[j]
 					Label labe = new Label(0, j, String(j));

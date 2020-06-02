@@ -50,8 +50,8 @@ public class TermVector {
 		}
 		catch (Exception e) {
 		}
-
 		return 1-mult2Vector(aV1, aV2)/(a1*a2);//1-cos
+//		return mult2Vector(aV1, aV2)/(a1*a2);//1-cos
 	}
 	public static double mult2Vector(docVector aV1, docVector aV2){
 		int num = aV1.getitemNum();//文档的数量,相当于维度

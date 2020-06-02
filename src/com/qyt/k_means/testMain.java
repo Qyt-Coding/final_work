@@ -32,21 +32,25 @@ public class testMain {
 
 	        Set<Cluster> clusterSet = kRun.run();
 	        System.out.println("单次迭代运行次数："+kRun.getIterTimes());
+	        int i =0;
 	        for (Cluster cluster : clusterSet) {
-	        	System.out.println("++++"+cluster.getId());
+	        	//System.out.println("++++"+cluster.getId());
 	        	 List<Point>pointList=cluster.getMembers();
 	        	 for(Point p:pointList) {
 	        		 Doc doc=Globalqyt.dBer.getDocById(p.getId());
 	        		 System.out.println("文档Id：   "+doc.getDocID()+"  文档内容 ："+doc.getDocCon());
 	        	 }
-	        	 Point po=null;
-	        	 if(pointList!=null && pointList.size()!=0) {
-	        		 po=pointList.get(0);
-	        		 Doc doc=Globalqyt.dBer.getDocById(po.getId());
-		        	 System.out.println(doc.getDocCon());
-	        	 }else {
-	        		 System.out.println("该集合没有");
+	        	 if(i<2) {
+	        		 break;
 	        	 }
+//	        	 Point po=null;
+//	        	 if(pointList!=null && pointList.size()!=0) {
+//	        		 po=pointList.get(0);
+//	        		 Doc doc=Globalqyt.dBer.getDocById(po.getId());
+//		        	 System.out.println(doc.getDocCon());
+//	        	 }else {
+//	        		 System.out.println("该集合没有");
+//	        	 }
 	        	
 	        	
 	        }
